@@ -1,4 +1,5 @@
 <?php
+    echo("<div>Maks Dzida</div>");
     $conn= new mysqli("127.0.0.1","root","","nauka1");
     $result=$conn->query('SELECT * FROM pracownicy');
         echo("<table border=1>");
