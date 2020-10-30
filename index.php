@@ -15,7 +15,6 @@
             }            
         echo("</table>");
 
-        $conn= new mysqli("127.0.0.1","root","","nauka1");
     $result=$conn->query('SELECT * FROM pracownicy where imie like "%a"');
         echo("<table border=1>");
         echo("<th>id</th>");
@@ -30,7 +29,6 @@
             }            
         echo("</table>");
 
-    $conn= new mysqli("127.0.0.1","root","","nauka1");
     $result=$conn->query('SELECT * FROM pracownicy where imie not like "%a"');
         echo("<table border=1>");
         echo("<th>id</th>");
@@ -44,7 +42,6 @@
             }
         echo("</table>");
 
-        $conn= new mysqli("127.0.0.1","root","","nauka1");
         $result=$conn->query('SELECT * FROM pracownicy where zarobki>10');
         echo("<table border=1>");
         echo("<th>id</th>");
@@ -58,7 +55,6 @@
         }
         echo("</table>");
 
-        $conn= new mysqli("127.0.0.1","root","","nauka1");
         $result=$conn->query('SELECT * FROM pracownicy');
         echo("<table border=1>");
         echo("<th>id</th>");
@@ -72,7 +68,6 @@
         }
         echo("</table>");
 
-        $conn= new mysqli("127.0.0.1","root","","nauka1");
         $result=$conn->query('SELECT * FROM pracownicy');
         echo("<table border=1>");
         echo("<th>id</th>");
@@ -86,7 +81,6 @@
         }
             echo("</table>");
 
-            $conn= new mysqli("127.0.0.1","root","","nauka1");
             $result=$conn->query('SELECT * FROM pracownicy');
             echo("<table border=1>");
             echo("<th>id</th>");
