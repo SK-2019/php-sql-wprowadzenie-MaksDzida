@@ -1,6 +1,6 @@
 <?php
     echo("<div>Maks Dzida</div>");
-    $conn= new mysqli("127.0.0.1","root","","nauka1");
+    $conn= new mysqli("remotemysql.com","2CMNLoipEx","MVjnZFDUhb","2CMNLoipEx");
     $result=$conn->query('SELECT * FROM pracownicy');
         echo("<table border=1>");
         echo("<th>id</th>");
