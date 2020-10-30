@@ -3,6 +3,8 @@
     $conn= new mysqli("remotemysql.com","2CMNLoipEx","MVjnZFDUhb","2CMNLoipEx");
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
+}
+  
     $result=$conn->query('SELECT * FROM pracownicy');
 
         echo("<table border=1>");
