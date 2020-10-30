@@ -1,6 +1,7 @@
 <?php
-    echo("<div>Maks Dzida</div>");
+    echo("<h1>Maks Dzida</h1>");
    require_once('connect.php');
+echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
     $result=$conn->query('SELECT * FROM pracownicy');
 
         echo("<table border=1>");
