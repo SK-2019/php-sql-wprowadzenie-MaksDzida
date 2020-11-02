@@ -17,7 +17,7 @@ echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
             }            
         echo("</table>");
 
-echo("<li>ZADANIE 2 SELECT * FROM pracownicy where imie like "%a"</li>");
+echo("<li>ZADANIE 2 SELECT * FROM pracownicy where imie like %a</li>");
 
     $result=$conn->query('SELECT * FROM pracownicy where imie like "%a"');
         echo("<table border=1>");
@@ -33,7 +33,7 @@ echo("<li>ZADANIE 2 SELECT * FROM pracownicy where imie like "%a"</li>");
             }            
         echo("</table>");
 
-echo("<li>ZADANIE 3 SELECT * FROM pracownicy where imie not like "%a" </li>");
+echo("<li>ZADANIE 3 SELECT * FROM pracownicy where imie not like %a </li>");
 
     $result=$conn->query('SELECT * FROM pracownicy where imie not like "%a"');
         echo("<table border=1>");
