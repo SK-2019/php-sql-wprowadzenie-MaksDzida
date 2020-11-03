@@ -1,4 +1,17 @@
 <?php
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
     echo("<h1>Maks Dzida</h1>");
    require_once('connect.php');
 echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
@@ -62,54 +75,7 @@ echo("<li>ZADANIE 4 SELECT * FROM pracownicy where zarobki>10 </li>");
             echo("</tr>");
         }
         echo("</table>");
-
-
-
-        $result=$conn->query('SELECT * FROM pracownicy');
-        echo("<table border=1>");
-        echo("<th>id</th>");
-        echo("<th>imie</th>");
-        echo("<th>dzial</th>");
-        echo("<th>zarobki</th>");
-        while($row=$result->fetch_assoc()){
-            echo("<tr>");
-            echo("<td>" .$row["id_pracownicy"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial"]. "</td><td>" .$row["zarobki"]. "</td>");
-            echo("</tr>");
-        }
-        echo("</table>");
-
-        $result=$conn->query('SELECT * FROM pracownicy');
-        echo("<table border=1>");
-        echo("<th>id</th>");
-        echo("<th>imie</th>");
-        echo("<th>dzial</th>");
-        echo("<th>zarobki</th>");
-        while($row=$result->fetch_assoc()){
-            echo("<tr>");
-            echo("<td>" .$row["id_pracownicy"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial"]. "</td><td>" .$row["zarobki"]. "</td>");
-            echo("</tr>");
-        }
-            echo("</table>");
-
-            $result=$conn->query('SELECT * FROM pracownicy');
-            echo("<table border=1>");
-            echo("<th>id</th>");
-            echo("<th>imie</th>");
-            echo("<th>dzial</th>");
-            echo("<th>zarobki</th>");
-            while($row=$result->fetch_assoc()){
-            echo("<tr>");
-            echo("<td>" .$row["id_pracownicy"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial"]. "</td><td>" .$row["zarobki"]. "</td>");
-           echo("</tr>"); 
-            }
-            echo("</table>");
-
-
-
-
-        
-            
-
-            
-            
+                     
 ?>
+</body>
+</html>
