@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
-
+<body>
     
 <?php
 
@@ -76,4 +76,5 @@ echo("<li>ZADANIE 4 SELECT * FROM pracownicy where zarobki>10 </li>");
         echo("</table>");
                      
 ?>
-
+</body>
+</html>
