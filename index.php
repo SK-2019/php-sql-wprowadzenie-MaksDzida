@@ -58,6 +58,7 @@ echo("<li>ZADANIE 3 SELECT * FROM pracownicy where imie not like %a </li>");
                         echo("</tr>"); 
             }
         echo("</table>");
+    echo("<hr>");    
 
 echo("<li>ZADANIE 4 SELECT * FROM pracownicy where zarobki>10 </li>");
 
