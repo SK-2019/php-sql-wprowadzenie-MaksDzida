@@ -4,14 +4,8 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
-
-
-
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-
-</body>
-</html>
+</head>
+<body>
     echo("<h1>Maks Dzida</h1>");
    require_once('connect.php');
 echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
