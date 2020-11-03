@@ -1,11 +1,15 @@
-<?php
-
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+<?php
+
+
+
+
     echo("<h1>Maks Dzida</h1>");
    require_once('connect.php');
 echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
