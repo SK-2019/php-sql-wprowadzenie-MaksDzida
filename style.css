@@ -2,9 +2,7 @@ body {
     background-color: #ffe6ff;
   }
 table {
-    background-color: #ffe6ff;
-    border: 1px solid black;
-    border-collapse: separate
+    background-color: #ffe6f;
 }
 tr, td, th {
     background-color: #ffe6ff;
