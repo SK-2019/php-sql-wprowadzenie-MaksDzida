@@ -92,6 +92,9 @@ echo("<li>ZADANIE 5 - SELECT avg(zarobki), nazwa_dzial FROM pracownicy, organiza
                         echo("</tr>");
             }            
         echo("</table>");
+    
+    
+    
 ?>
 </body>
 </html>
