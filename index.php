@@ -5,7 +5,7 @@
 </head>
 <body>
     
-<a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a>
+<strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
 <?php
 
 
