@@ -5,14 +5,14 @@
 </head>
 <body>
     
-    
+ <div class="link"><strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong></div>   
 <?php
 
 
 
 
     echo("<h1>Maks Dzida</h1>");
-    <div class="link"><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></div>
+    
    require_once('connect.php');
 echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
     $result=$conn->query('SELECT * FROM pracownicy');
