@@ -82,7 +82,7 @@ echo("<li>ZADANIE 4 SELECT * FROM pracownicy where zarobki>10 </li>");
     
 echo("<li>ZADANIE 5 - SELECT avg(zarobki), nazwa_dzial FROM pracownicy, organizacja group by nazwa_dzial</li>");
 
-    $result=$conn->query("SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org group by nazwa_dzial");
+    $result=$conn->query("SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org group by dzial");
         echo("<table border=1>");
         echo("<th>Średnia</th>");
         echo("<th>Dział</th>");
