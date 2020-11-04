@@ -4,10 +4,11 @@ body {
 table {
     background-color: #ffe6ff;
     border: 1px solid black;
-    border-collapse: separate
+    border-collapse: separate;
 }
 td, tr, th {
     background-color: #ffe6ff;
+    border: 1px
 }
 tr:nth-child(even){
     background-color: #f2f2f2;
