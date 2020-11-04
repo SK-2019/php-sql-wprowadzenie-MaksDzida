@@ -17,19 +17,19 @@
 echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
     $result=$conn->query('SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org');
 
-        echo("<table border=1>");
-        echo("<th>id</th>");
-        echo("<th>imie</th>");
-        echo("<th>dzial</th>");
-        echo("<th>zarobki</th>");
-        
-            while($row=$result->fetch_assoc()){
-                    echo("<tr>");
-                        echo("<td>" .$row["id_pracownicy"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial"]. "</td><td>" .$row["zarobki"]. "</td>");
-                        echo("</tr>");
-            }            
-        echo("</table>");
+       echo("<table>");
+        echo("<th>Imie</th>");
+        echo("<th>Zarobki</th>");
+        echo("<th>Data_Urodzenia</th>");
+        echo("<th>Nazwa_Działu</th>");
+            while($row=$result->fetch_assoc()){ 
+                echo("<tr>");
+                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
 
+                echo("</tr>");
+            }
+
+        echo("</table>");
 echo("<li>ZADANIE 2 SELECT * FROM pracownicy where imie like %a </li>");
 
     $result=$conn->query('SELECT * FROM pracownicy where imie like "%a"');
