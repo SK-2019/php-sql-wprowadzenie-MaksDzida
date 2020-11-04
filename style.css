@@ -1,7 +1,16 @@
 body {
     background-color: #ffe6ff;
   }
-table, td, tr, th {
+table {
+    background-color: #ffe6ff;
+    border: 1px solid black;
+td {
+    background-color: #ffe6ff;
+    border: 1px solid black;
+tr {
+    background-color: #ffe6ff;
+    border: 1px solid black;
+th {
     background-color: #ffe6ff;
     border: 1px solid black;
   }
