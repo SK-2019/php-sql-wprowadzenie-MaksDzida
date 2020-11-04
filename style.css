@@ -2,9 +2,6 @@ body {
     background-color: #ffe6ff;
   }
 table {
-    background-color: #ffe6f;
-}
-tr, td, th {
     background-color: #ffe6ff;
 }
 tr:nth-child(even){
