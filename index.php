@@ -18,13 +18,14 @@ echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
     $result=$conn->query('SELECT imie, zarobki, data_urodzenia, nazwa_dzial FROM `pracownicy`, `organizacja` WHERE dzial = id_org');
 
        echo("<table>");
+        echo("<th>ID</th>");
         echo("<th>Imie</th>");
+        echo("<th>Dział</th>");
         echo("<th>Zarobki</th>");
-        echo("<th>Data_Urodzenia</th>");
-        echo("<th>Nazwa_Działu</th>");
+        echo("<th>Data urodzenia</th>");
             while($row=$result->fetch_assoc()){ 
                 echo("<tr>");
-                    echo("<td>".$row["imie"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
+                    echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["nazwa_dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td>"); 
 
                 echo("</tr>");
             }
