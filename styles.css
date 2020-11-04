@@ -6,13 +6,10 @@ table {
     border: 1px solid black;
 td {
     background-color: #ffe6ff;
-    border: 1px solid black;
 tr {
     background-color: #ffe6ff;
-    border: 1px solid black;
 th {
     background-color: #ffe6ff;
-    border: 1px solid black;
   }
 tr:nth-child(even){
     background-color: #f2f2f2;
