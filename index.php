@@ -5,7 +5,7 @@
 </head>
 <body>
     
-     <h2><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida</a><h2>
+    
 <?php
 
 
