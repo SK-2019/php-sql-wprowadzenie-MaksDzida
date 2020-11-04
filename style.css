@@ -1,7 +1,7 @@
 body {
     background-color: #ffe6ff;
   }
-table {
+table, td, tr, th {
     background-color: #ffe6ff;
     border: 1px solid black;
   }
