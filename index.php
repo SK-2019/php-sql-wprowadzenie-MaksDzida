@@ -11,6 +11,7 @@
 
 
     echo("<h1>Maks Dzida</h1>");
+    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida"> link do githuba mojego </a>
    require_once('connect.php');
 echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
     $result=$conn->query('SELECT * FROM pracownicy');
