@@ -93,6 +93,18 @@ echo("<li>ZADANIE 5 - SELECT avg(zarobki), nazwa_dzial FROM pracownicy, organiza
             }            
         echo("</table>");
     
+    echo("<li>ZADANIE 6 - SELECT avg(zarobki) AS srednia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org GROUP BY dzial HAVING avg(zarobki)<36</li>");
+   $result = $conn -> query('SELECT avg(zarobki) AS srednia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org GROUP BY dzial HAVING avg(zarobki)<36');
+       echo("<table border=1>");
+         echo("<th>Średnia</th>");
+         echo("<th>Dział</th>");
+             while($row = $result -> fetch_assoc()){                                                                                                    
+                echo("<tr>");
+                   echo("<td>" .$row["srednia"]. "</td><td>" .$row["nazwa_dzial"]. "</td>");
+                echo("</tr>");
+            }
+        echo("</table>");
+    
     
     
 ?>
