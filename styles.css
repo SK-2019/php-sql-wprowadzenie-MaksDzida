@@ -8,6 +8,7 @@ table {
 }
 td, tr, th {
     background-color: #ffe6ff;
+    border: 1px solid black;
 }
 tr:nth-child(even){
     background-color: #f2f2f2;
