@@ -5,7 +5,15 @@ table {
     background-color: #ffe6ff;
     border: 1px solid black;
 }
-td, tr, th {
+tr {
+    background-color: #ffe6ff;
+    border: 1px solid black;
+}
+th {
+    background-color: #ffe6ff;
+    border: 1px solid black;
+}
+td {
     background-color: #ffe6ff;
     border: 1px solid black;
 }
