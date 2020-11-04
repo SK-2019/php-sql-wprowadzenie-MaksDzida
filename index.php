@@ -77,7 +77,21 @@ echo("<li>ZADANIE 4 SELECT * FROM pracownicy where zarobki>10 </li>");
             echo("</tr>");
         }
         echo("</table>");
-                     
+    
+   
+    
+echo("<li>ZADANIE 5 - SELECT avg(zarobki), nazwa_dzial FROM pracownicy, organizacja group by nazwa_dzial</li>");
+
+    $result=$conn->query("SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org group by nazwa_dzial");
+        echo("<table border=1>");
+        echo("<th>Średnia</th>");
+        echo("<th>Dział</th>");
+            while($row=$result->fetch_assoc()){
+                    echo("<tr>");
+                        echo("<td>" .$row["srednia"]. "</td><td>" .$row["nazwa_dzial"]. "</td>");
+                        echo("</tr>");
+            }            
+        echo("</table>");
 ?>
 </body>
 </html>
