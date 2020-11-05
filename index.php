@@ -105,7 +105,7 @@ echo("<li>ZADANIE 5 - SELECT avg(zarobki), nazwa_dzial FROM pracownicy, organiza
             }
         echo("</table>");
     
-    cho("<li>ZADANIE 6 -SELECT min(zarobki) AS minimum, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org  and imie like %a </li>");
+    echo("<li>ZADANIE 7 -SELECT min(zarobki) AS minimum, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org  and imie like %a </li>");
    $result = $conn -> query('SELECT min(zarobki) AS minimum, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org  and imie like "%a"');
        echo("<table border=1>");
          echo("<th>Minimum</th>");
