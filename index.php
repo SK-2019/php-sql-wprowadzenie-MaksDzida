@@ -33,23 +33,6 @@ echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
         echo("</table>");
      echo("<hr>");
     
-echo("<li>ZADANIE 2 SELECT * FROM pracownicy where imie like %a </li>");
-
-    $result=$conn->query("SELECT  id_pracownicy, imie, zarobki, data_urodzenia, nazwa_dzial  FROM pracownicy, organizacja where dzial=id_org");
-        echo("<table border=1>");
-        echo("<th>id</th>");
-        echo("<th>Imie</th>");
-        echo("<th>Dział</th>");
-        echo("<th>Zarobki</th>");
-    echo("<th>Data urodzenia</th>")
-         echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["nazwa_dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td>"); 
-            while($row=$result->fetch_assoc()){
-                    echo("<tr>");
-                       
-                        echo("</tr>");
-            }            
-        echo("</table>");
-     echo("<hr>");
 
 echo("<li>ZADANIE 3 SELECT * FROM pracownicy where imie not like %a </li>");
 
