@@ -149,7 +149,7 @@ echo("<li>SELECT * FROM pracownicy</li>");
 
         echo("</table>");
 	
-	echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie like %a order by imie asc </li>");
+	echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie  like %a and (dzial = 1 or dzial=3) order by zarobki asc </li>");
     
   $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie  like "%a" and (dzial = 1 or dzial=3) order by zarobki asc');
         echo("<table border=1>");
