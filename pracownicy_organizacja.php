@@ -168,7 +168,7 @@ echo("<li>SELECT * FROM pracownicy</li>");
 
         echo("</table>");
 	
-	echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie NOT LIKE "%a" order by  nazwa_dzial asc, zarobki asc </li>");
+	echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie NOT LIKE %a order by  nazwa_dzial asc, zarobki asc </li>");
     
   $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org  and imie NOT LIKE "%a" order by  nazwa_dzial asc, zarobki asc');
         echo("<table border=1>");
