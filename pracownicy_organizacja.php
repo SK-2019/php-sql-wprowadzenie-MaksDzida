@@ -89,6 +89,8 @@ echo("<li>SELECT * FROM pracownicy</li>");
             }
 
         echo("</table>");
+	
+	echo("<h2> Sortowanie </h2>");
     
     ?>
     </body>
