@@ -7,6 +7,7 @@
 <h1>Maksymilian Dzida 2Ti</h1>
 <a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida"> link do mojego githuba </a>
    <a class="nav_link" href="funkcjeAgregujace.php">Funkcje Agregujace</a>
+    <a class="nav_link" href="index.php">Pracownicy - Strona</a>
 <?php
     require_once('connect.php');
 echo("<li> SELECT * FROM pracownicy</li>");
