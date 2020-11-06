@@ -47,7 +47,7 @@ echo("<li> SELECT * FROM pracownicy</li>");
         echo("</table>");
    
      echo("<li> SELECT * FROM pracownicy where dzial=2 </li>");
-    $result=$conn->query("SELECT * from pracownicy where (dzial=2 or dzial=3");
+    $result=$conn->query("SELECT * from pracownicy where (dzial=2 or dzial=3)");
 
        echo("<table border=1>");
         echo("<th>ID</th>");
