@@ -113,7 +113,7 @@ echo("<li>SELECT * FROM pracownicy</li>");
 	
 	echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org order by imie desc</li>");
     
-  $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and dzial=3 order by asc');
+  $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and dzial=3 order by');
         echo("<table border=1>");
 	echo("<th>ID</th>");
         echo("<th>Imie</th>");
