@@ -7,8 +7,8 @@
     
 <strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
 <div class="nav">
-<a href="pracownicy.php">Pracownicy - wstęp</a>
-    <a href="funkcAgregujace.php">Funkcje Agregujace</a>
+    <a class="nav_link" href="pracownicy.php">Pracownicy - wstęp</a>
+    <a class="nav_link" href="funkcAgregujace.php">Funkcje Agregujace</a>
 </div>
  <h1>Maks Dzida</h1>   
     
