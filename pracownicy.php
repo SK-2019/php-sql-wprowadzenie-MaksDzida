@@ -1,4 +1,4 @@
 <?php
-echo("tu jestem: Funkcje Agregujące");
+echo("tu jestem: Pracownicy");
 
 ?>
