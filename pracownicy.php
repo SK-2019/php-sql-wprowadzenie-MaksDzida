@@ -28,8 +28,8 @@ echo("<li> SELECT * FROM pracownicy</li>");
 
         echo("</table>");
    
-   echo("<li> SELECT * FROM pracownicy</li>");
-    $result=$conn->query("SELECT id_pracownicy, imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org and dzial=1 and dzial=4");
+   echo("<li>SELECT id_pracownicy, imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org and (dzial=1 and dzial=4) </li>");
+    $result=$conn->query("SELECT id_pracownicy, imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org and (dzial=1 and dzial=4)");
 
        echo("<table border=1>");
         echo("<th>ID</th>");
