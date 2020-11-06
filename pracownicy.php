@@ -5,7 +5,7 @@
 </head>
 <body>
 <h1>Maksymilian Dzida 2Ti</h1>
-<a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida"> link do mojego githuba </a>
+<strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
    <a class="nav_link" href="funkcjeAgregujace.php">Funkcje Agregujace</a>
     <a class="nav_link" href="index.php">Pracownicy - Strona</a>
 <?php
