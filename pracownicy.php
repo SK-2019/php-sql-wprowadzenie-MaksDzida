@@ -8,7 +8,7 @@
 <a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida"> link do mojego githuba </a>
    <a class="nav_link" href="funkcjeAgregujace.php">Funkcje Agregujace</a>
 <?php
-    require_once('conn.php');;
+    require_once('conn.php');
     $result=$conn->query('SELECT * FROM pracownicy,organizacja where dzial=id_org');
         echo("<hr />");
         echo("<h3>Tabela Pracowników</h3>");
