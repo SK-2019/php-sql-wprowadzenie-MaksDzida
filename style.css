@@ -9,5 +9,9 @@ tr:nth-child(even){
 }
 
 .nav{
-    color:red;
+    background-color:lightblue;
+}
+
+.nav_link{
+    color: red;
 }
