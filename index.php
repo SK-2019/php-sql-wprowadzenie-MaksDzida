@@ -6,13 +6,13 @@
 <body>
     
 <strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
-<?php
-
-
-
-
-    echo("<h1>Maks Dzida</h1>");
+<div class="nav">
+<a href="pracownicy.php">Pracownicy - wstęp</a>
+    <a href="funkcAgregujace.php">Funkcje Agregujace</a>
+</div>
+ <h1>Maks Dzida</h1>   
     
+<?php
    require_once('connect.php');
 echo("<li>ZADANIE 1 SELECT * FROM pracownicy</li>");
     $result=$conn->query("SELECT id_pracownicy, imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org");
