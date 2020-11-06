@@ -4,10 +4,15 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   
+   <strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
+<div class="nav">
+    <a class="nav_link" href="pracownicy.php">Pracownicy - wstęp</a>
+    <a class="nav_link" href="funkcAgregujace.php">Funkcje Agregujace</a>
+     <a class="nav_link" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
+</div>
 <h1>Maksymilian Dzida 2Ti</h1>
-<strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
-   <a class="nav_link" href="funkcjeAgregujace.php">Funkcje Agregujace</a>
-    <a class="nav_link" href="index.php">Pracownicy - Strona</a>
+
 <?php
     require_once('connect.php');
 echo("<li> SELECT * FROM pracownicy</li>");
