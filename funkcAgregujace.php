@@ -34,13 +34,11 @@
 
     $result=$conn->query("SELECT SUM(zarobki) as suma, dzial FROM pracownicy WHERE imie  LIKE '%a'");
         echo("<table border=1>");
-     echo("<th>ID</th>");
-    echo("<th>imie</th>");
         echo("<th>Suma</th>");
         echo("<th>Dział</th>");
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
-                        echo("<td>" .$row["id_pracownicy"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["suma"]. "</td><td>" .$row["dzial"]. "</td>");
+                        echo("<td>" .$row["suma"]. "</td><td>" .$row["dzial"]. "</td>");
                         echo("</tr>");
             }            
         echo("</table>");
