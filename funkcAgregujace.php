@@ -56,6 +56,32 @@
         echo("</table>");
      echo("<hr>");
     
+     echo("<li>SELECT AVG(zarobki) as srednia FROM pracownicy WHERE imie LIKE %a </li>");
+
+    $result=$conn->query("SELECT AVG(zarobki) as srednia FROM pracownicy WHERE imie LIKE '%a'");
+        echo("<table border=1>");
+        echo("<th>Średnia</th>");
+            while($row=$result->fetch_assoc()){
+                    echo("<tr>");
+                        echo("<td>" .$row["srednia"]. "</td>");
+                        echo("</tr>");
+            }            
+        echo("</table>");
+     echo("<hr>");
+    
+    echo("<li>SELECT AVG(zarobki) as srednia FROM pracownicy WHERE dzial=4 </li>");
+
+    $result=$conn->query("SELECT AVG(zarobki) as srednia FROM pracownicy WHERE dzial=4");
+        echo("<table border=1>");
+        echo("<th>Średnia</th>");
+            while($row=$result->fetch_assoc()){
+                    echo("<tr>");
+                        echo("<td>" .$row["srednia"]. "</td>");
+                        echo("</tr>");
+            }            
+        echo("</table>");
+     echo("<hr>");
+    
 
   
     
