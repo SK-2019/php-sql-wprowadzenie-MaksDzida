@@ -40,7 +40,7 @@
         echo("<th>Dział</th>");
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
-                        echo("<td>" .$row["id_pracownicy"]. "</td><td>" .$row["suma"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["suma"]. "</td><td>" .$row["dzial"]. "</td>");
+                        echo("<td>" .$row["id_pracownicy"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["suma"]. "</td><td>" .$row["dzial"]. "</td>)
                         echo("</tr>");
             }            
         echo("</table>");
