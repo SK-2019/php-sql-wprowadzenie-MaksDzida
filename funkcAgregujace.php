@@ -32,7 +32,7 @@
     
     echo("<li> SELECT sum(zarobki) as suma from pracownicy</li>");
 
-    $result=$conn->query("SELECT SUM(zarobki) as suma, dzial FROM pracownicy WHERE imie  LIKE '%a'");
+    $result=$conn->query("SELECT SUM(zarobki) as suma FROM pracownicy WHERE imie  LIKE '%a'");
         echo("<table border=1>");
         echo("<th>Suma</th>");
             while($row=$result->fetch_assoc()){
