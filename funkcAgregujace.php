@@ -16,45 +16,22 @@
 <?php
    require_once('connect.php');
     
-echo("<li>ZADANIE 4 - SELECT avg(zarobki), nazwa_dzial FROM pracownicy, organizacja group by nazwa_dzial</li>");
+    echo("<li> SELECT sum(zarobki) as suma from pracownicy</li>");
 
     $result=$conn->query("SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org group by dzial");
         echo("<table border=1>");
-        echo("<th>Średnia</th>");
+        echo("<th>Suma</th>");
         echo("<th>Dział</th>");
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
-                        echo("<td>" .$row["srednia"]. "</td><td>" .$row["nazwa_dzial"]. "</td>");
+                        echo("<td>" .$row["suma"]. "</td><td>" .$row["dzial"]. "</td>");
                         echo("</tr>");
             }            
         echo("</table>");
      echo("<hr>");
     
-    echo("<li>ZADANIE 5 - SELECT avg(zarobki) AS srednia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org GROUP BY dzial HAVING avg(zarobki)<36</li>");
-   $result = $conn -> query('SELECT avg(zarobki) AS srednia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org GROUP BY dzial HAVING avg(zarobki)<36');
-       echo("<table border=1>");
-         echo("<th>Średnia</th>");
-         echo("<th>Dział</th>");
-             while($row = $result -> fetch_assoc()){                                                                                                    
-                echo("<tr>");
-                   echo("<td>" .$row["srednia"]. "</td><td>" .$row["nazwa_dzial"]. "</td>");
-                echo("</tr>");
-            }
-        echo("</table>");
-     echo("<hr>");
-    
-    echo("<li>ZADANIE 6 -SELECT min(zarobki) AS minimum, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org  and imie like %a and dzial=2 </li>");
-   $result = $conn -> query('SELECT min(zarobki) AS minimum, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org  and (imie like "%a") and dzial=2');
-       echo("<table border=1>");
-         echo("<th>Minimum</th>");
-         echo("<th>Dział</th>");
-             while($row = $result -> fetch_assoc()){                                                                                                    
-                echo("<tr>");
-                   echo("<td>" .$row["minimum"]. "</td><td>" .$row["nazwa_dzial"]. "</td>");
-                echo("</tr>");
-            }
-        echo("</table>");
-    
+
+  
     
     
 ?>
