@@ -18,7 +18,7 @@
     
     echo("<li> SELECT sum(zarobki) as suma from pracownicy</li>");
 
-    $result=$conn->query("SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja where dzial=id_org group by dzial");
+    $result=$conn->query("SELECT sum(zarobki) as suma from pracownicy");
         echo("<table border=1>");
         echo("<th>Suma</th>");
         echo("<th>Dział</th>");
