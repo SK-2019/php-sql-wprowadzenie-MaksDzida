@@ -82,6 +82,33 @@
         echo("</table>");
      echo("<hr>");
     
+     echo("<li>SELECT AVG(zarobki) as srednia FROM pracownicy WHERE imie NOT LIKE %a and (dzial=1 OR dzial=2) </li>");
+
+    $result=$conn->query("SELECT AVG(zarobki)as srednia FROM pracownicy WHERE imie NOT LIKE '%a' and (dzial=1 OR dzial=2)");
+        echo("<table border=1>");
+        echo("<th>Średnia</th>");
+            while($row=$result->fetch_assoc()){
+                    echo("<tr>");
+                        echo("<td>" .$row["srednia"]. "</td>");
+                        echo("</tr>");
+            }            
+        echo("</table>");
+     echo("<hr>");
+    
+     echo("<li>SELECT COUNT(imie) as ilosc FROM pracownicy</li>");
+
+    $result=$conn->query("SELECT COUNT(imie) as ilosc FROM pracownicy");
+        echo("<table border=1>");
+        echo("<th>ilość</th>");
+            while($row=$result->fetch_assoc()){
+                    echo("<tr>");
+                        echo("<td>" .$row["ilosc"]. "</td>");
+                        echo("</tr>");
+            }            
+        echo("</table>");
+     echo("<hr>");
+    
+    
 
   
     
