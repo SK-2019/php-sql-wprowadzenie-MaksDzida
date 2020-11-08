@@ -108,11 +108,21 @@
         echo("</table>");
      echo("<hr>");
     
-    
+    echo("<li>SELECT COUNT(imie) as ilosc FROM pracownicy WHERE imie LIKE '%a' and (dzial=1 OR dzial=3)</li>");
 
-  
-    
-    
+    $result=$conn->query("SELECT COUNT(imie) as ilosc FROM pracownicy WHERE imie LIKE '%a' and (dzial=1 OR dzial=3)");
+        echo("<table border=1>");
+        echo("<th>ilość</th>");
+            while($row=$result->fetch_assoc()){
+                    echo("<tr>");
+                        echo("<td>" .$row["ilosc"]. "</td>");
+                        echo("</tr>");
+            }            
+        echo("</table>");
+     echo("<hr>");
+         
+         
+         
 ?>
 </body>
 </html>
