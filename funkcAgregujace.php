@@ -173,7 +173,7 @@
                         echo("<tr>");
                         echo("<td>".$row["suma"]."</td><td>".$row["plec"]."</td>"); 
                         echo("</tr>");
-			    echo("<hr>");
+			    
                     }
 
                 echo("</table>");
@@ -191,6 +191,22 @@
                     }
 
                 echo("</table>"); 
+	echo("<hr>");
+	
+	echo("<h2> Klauzula Having </h2>");
+	
+	echo("<li>SELECT sum(zarobki) as suma, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28</li>");
+                $result = $conn->query('SELECT sum(zarobki) as suma, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28');
+                echo("<table border=1>");
+                echo("<th>Nazwa_działu</th>");
+                echo("<th>Suma</th>");
+                    while($row=$result->fetch_assoc()){
+                        echo("<tr>");
+                        echo("<td>".$row["nazwa_dzial"]."</td><td>".$row["suma"]."</td>");
+                    }
+
+                echo("</table>");
+	echo("<hr>");
 	
 	
  
