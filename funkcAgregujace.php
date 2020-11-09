@@ -149,6 +149,34 @@
                     }
 	echo("</table>");
 	echo("<hr>");
+	
+	echo("<li> SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial</li>");
+                $result = $conn->query('SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial'); 
+                echo("<table border=1>");
+                echo("<th>Nazwa_działu</th>");
+                echo("<th>Średnia</th>");
+                    while($row=$result->fetch_assoc()){ 
+                        echo("<tr>");
+                        echo("<td>".$row["nazwa_dzial"]."</td><td>".$row["srednia"]."</td>"); 
+                        echo("</tr>");
+                    }
+
+        echo("</table>");  
+	echo("<hr>");
+	
+	                echo("<li> SELECT sum(zarobki) as suma, if(imie like '%a', 'Kobiety', 'Mężczyźni') as plec FROM pracownicy group by plec</li>");
+                $result = $conn->query('SELECT sum(zarobki) as sum, if(imie like "%a", "Kobiety", "Mężczyźni") as plec FROM pracownicy group by plec'); 
+                echo("<table border=1>");
+                echo("<th>Suma</th>");
+                echo("<th>Płeć</th>");
+                    while($row=$result->fetch_assoc()){ 
+                        echo("<tr>");
+                        echo("<td>".$row["suma"]."</td><td>".$row["plec"]."</td>"); 
+                        echo("</tr>");
+                    }
+
+                echo("</table>");
+	echo("<hr>");
  
          
          
