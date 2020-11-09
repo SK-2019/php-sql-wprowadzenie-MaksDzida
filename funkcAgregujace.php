@@ -123,7 +123,7 @@
     
     echo("<h2> Group By </h2>");
     
-    echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org order by imie asc</li>");
+    echo("<li>SELECT sum(zarobki),nazwa_dzial FROM pracownicy,organizacja WHERE dzial = id_org GROUP BY dzial</li>");
 	
          $result = $conn->query('SELECT nazwa_dzial, sum(zarobki) as sz FROM pracownicy, organizacja WHERE dzial=id_org group by dzial'); 
              echo("<table border=1>");
@@ -134,6 +134,21 @@
                         echo("<td>".$row["nazwa_dzial"]."</td><td>".$row["sz"]."</td>"); 
                         echo("</tr>");
                     }
+	 echo("</table>");
+	 echo("<hr>");
+	
+	  echo("<li> SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial</li>");
+                $result = $conn->query('SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial'); 
+                echo("<table border=1>");
+                echo("<th>Nazwa_działu</th>");
+                echo("<th>Ilość</th>");
+                    while($row=$result->fetch_assoc()){ 
+                        echo("<tr>");
+                        echo("<td>".$row["nazwa_dzial"]."</td><td>".$row["ilosc"]."</td>"); 
+                        echo("</tr>");
+                    }
+	echo("</table>");
+	echo("<hr>");
  
          
          
