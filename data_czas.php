@@ -34,3 +34,7 @@
                }
    
            echo("</table>");
+             
+?>
+</body>
+</html>
