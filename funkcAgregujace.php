@@ -221,8 +221,8 @@
                 echo("</table>");
 	echo("<hr>");
 	
-	echo("<li>SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>2</li>");
-                $result = $conn->query('SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>2');
+	echo("<li>SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>3</li>");
+                $result = $conn->query('SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>3');
                 echo("<table border=1>");
                 echo("<th>Ilość</th>");
                 echo("<th>Nazwa_działu</th>");
