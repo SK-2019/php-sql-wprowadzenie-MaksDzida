@@ -195,17 +195,31 @@
 	
 	echo("<h2> Klauzula Having </h2>");
 	
-	echo("<h2>ZADANIE 14: SELECT sum(zarobki) as sum, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28</h2>");
-                $result = $conn->query('SELECT sum(zarobki) as sum, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28');
+	echo("<li> SELECT sum(zarobki) as suma, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28</li>");
+                $result = $conn->query('SELECT sum(zarobki) as suma, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial HAVING sum(zarobki)<28');
                 echo("<table border=1>");
                 echo("<th>Nazwa_działu</th>");
-                echo("<th>Suma_zarobków</th>");
+                echo("<th>Suma</th>");
                     while($row=$result->fetch_assoc()){
                         echo("<tr>");
-                        echo("<td>".$row["nazwa_dzial"]."</td><td>".$row["sum"]."</td>");
+                        echo("<td>".$row["nazwa_dzial"]."</td><td>".$row["suma"]."</td>");
                     }
 
                 echo("</table>");
+	echo("<hr>");
+	
+	 echo("<li> SELECT avg(zarobki) as srednia_zarobki, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like '%a') group by dzial having avg(zarobki)>30</li>");
+                $result = $conn->query('SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like "%a") group by dzial having avg(zarobki)>30');
+                echo("<table border=1>");
+                echo("<th>Nazwa_działu</th>");
+                echo("<th>Średnia</th>");
+                    while($row=$result->fetch_assoc()){
+                        echo("<tr>");
+                        echo("<td>".$row["nazwa_dzial"]."</td><td>".$row["srednia"]."</td>");
+                    }
+
+                echo("</table>");
+	echo("<hr>");
  
          
          
