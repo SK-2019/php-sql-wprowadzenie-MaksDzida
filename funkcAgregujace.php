@@ -179,16 +179,7 @@
                 echo("</table>");
 	echo("<hr>");
 	
-	echo("<li> SELECT avg(zarobki) as srednia, if(imie like '%a', 'Kobiety', 'Mężczyźni') as plec FROM pracownicy group by plec</li>");
-                $result = $conn->query('SELECT avg(zarobki) as srednia, if(imie like "%a", "Kobiety", "Mężczyźni") as plec FROM pracownicy group by plec'); 
-                echo("<table border=1>");
-                echo("<th>Średnia</th>");
-                echo("<th>Płeć</th>");
-                    while($row=$result->fetch_assoc()){ 
-                        echo("<tr>");
-                        echo("<td>".$row["srednia"]."</td><td>".$row["plec"]."</td>"); 
-                        echo("</tr>");
-			    echo("<hr>");
+	
  
          
          
