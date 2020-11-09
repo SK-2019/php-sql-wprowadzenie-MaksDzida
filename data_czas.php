@@ -15,7 +15,7 @@
  <h1>Maks Dzida</h1>   
     
 <?php
-   require_once('connect.php')
+   require_once('connect.php');
      
         echo("<h2>ZADANIE 1: SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org</h2>");
        $result = $conn->query('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org');
@@ -30,7 +30,7 @@
                while($row=$result->fetch_assoc()){ 
                    echo("<tr>");
                    echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["nazwa_dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td><td>".$row["wiek"]."</td>");                    
-                   echo("</tr>")
+                   echo("</tr>");
                }
     echo("</table>");
   
