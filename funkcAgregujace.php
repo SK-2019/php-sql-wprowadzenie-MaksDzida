@@ -220,6 +220,18 @@
 
                 echo("</table>");
 	echo("<hr>");
+	
+	echo("<li>SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>2</li>");
+                $result = $conn->query('SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>2');
+                echo("<table border=1>");
+                echo("<th>Ilość</th>");
+                echo("<th>Nazwa_działu</th>");
+                    while($row=$result->fetch_assoc()){
+                        echo("<tr>");
+                        echo("<td>".$row["ilosc"]."</td><td>".$row["nazwa_dzial"]."</td>");
+                    }
+
+                echo("</table>");
  
          
          
