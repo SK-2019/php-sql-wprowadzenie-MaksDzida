@@ -9,6 +9,7 @@
 <div class="nav">
     <a class="nav_link" href="pracownicy.php">Pracownicy - wstęp</a>
      <a class="nav_link" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
+	 <a class="nav_link" href="data_czas.php">Data i Czas</a>
     <a class="nav_link" href="index.php">Strona</a>
 </div>
  <h1>Maks Dzida</h1>   
