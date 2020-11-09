@@ -165,7 +165,7 @@
 	echo("<hr>");
 	
 	                echo("<li> SELECT sum(zarobki) as suma, if(imie like '%a', 'Kobiety', 'Mężczyźni') as plec FROM pracownicy group by plec</li>");
-                $result = $conn->query('SELECT sum(zarobki) as sum, if(imie like "%a", "Kobiety", "Mężczyźni") as plec FROM pracownicy group by plec'); 
+                $result = $conn->query('SELECT sum(zarobki) as suma, if(imie like "%a", "Kobiety", "Mężczyźni") as plec FROM pracownicy group by plec'); 
                 echo("<table border=1>");
                 echo("<th>Suma</th>");
                 echo("<th>Płeć</th>");
