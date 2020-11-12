@@ -35,6 +35,7 @@
                    echo("</tr>");
                }
     echo("</table>");
+    echo("<hr>");
     
     $sql='SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial="serwis"';
     
@@ -55,6 +56,7 @@
                    }
        
                echo("</table>");
+    echo("<hr>");
     
     $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org';
             echo("<li>.$sql</li>");
@@ -67,6 +69,7 @@
                         echo("</tr>");
                    }
            echo("</table>");
+    echo("<hr>");
            
            $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial="handel"';
            echo("<li>.$sql</li>");
@@ -79,6 +82,7 @@
                        echo("</tr>");
                   }
           echo("</table>");
+    echo("<hr>");
     
      $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie like "%a"';
           echo("<li>.$sql</li>");
@@ -91,6 +95,7 @@
                       echo("</tr>");
                  }
          echo("</table>");
+    echo("<hr>");
     
      $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie not like "%a"';
           echo("<li>.$sql</li>");
@@ -103,6 +108,7 @@
                       echo("</tr>");
                  }
          echo("</table>");
+    echo("<hr>");
     
     $sql='SELECT dzial, avg(YEAR(CURDATE()) - YEAR(data_urodzenia)) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial';
           echo("<li>.$sql</li>");
@@ -117,6 +123,7 @@
                       echo("</tr>");
                  }
          echo("</table>");
+    echo("<hr>");
     
     $sql = 'SELECT dzial, sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as suma, nazwa_dzial from pracownicy, organizacja where dzial=id_org group by dzial';
 echo("<li>.$sql</li>");
@@ -132,6 +139,7 @@ echo("<li>.$sql</li>");
             }
    
            echo("</table>");
+    echo("<hr>");
     
     $sql = 'SELECT dzial, max(YEAR(CURDATE()) - YEAR(data_urodzenia)) as max, nazwa_dzial from pracownicy, organizacja where dzial=id_org group by dzial';
 echo("<li>.$sql</li>");
@@ -148,6 +156,7 @@ echo("<li>.$sql</li>");
             }
    
            echo("</table>");
+    echo("<hr>");
     
     $sql = 'SELECT min(YEAR(CURDATE()) - YEAR(data_urodzenia)) as min, nazwa_dzial from pracownicy, organizacja where dzial=id_org and (nazwa_dzial="handel" OR nazwa_dzial="serwis") group by dzial';
 echo("<li>.$sql</li>");
@@ -163,7 +172,8 @@ echo("<li>.$sql</li>");
             }
    
            echo("</table>");
-    
+    echo("<hr>");
+   
     $sql = 'Select min(year(curdate())-year(data_urodzenia)) as minwiek, nazwa_dzial from pracownicy, organizacja where dzial=id_org and (nazwa_dzial="handel" or nazwa_dzial="serwis") group by nazwa_dzial';
 echo("<li>.$sql</li>");
     
@@ -179,6 +189,7 @@ echo("<li>.$sql</li>");
             }
    
            echo("</table>");
+    echo("<hr>");
     
     $sql = 'SELECT imie, DATEDIFF(CURDATE(),data_urodzenia) as dni_zycia from pracownicy';
 echo("<li>.$sql</li>");
@@ -194,6 +205,7 @@ echo("<li>.$sql</li>");
             }
    
            echo("</table>");
+    echo("<hr>");
     
      $sql = 'SELECT * from pracownicy where imie not like "%a" order by data_urodzenia asc limit 1';
 echo("<li>.$sql</li>");
