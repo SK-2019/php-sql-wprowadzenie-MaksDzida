@@ -80,6 +80,47 @@
                   }
           echo("</table>");
     
+     $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie like "%a"';
+          echo("<li>.$sql</li>");
+          $result = $conn->query($sql);
+              echo("<table border>");
+              echo("<th>Wiek_kobiet</th>");
+                  while($row=$result->fetch_assoc()){ 
+                      echo("<tr>");
+                      echo("<td>".$row["wiek"]."</td>");                    
+                      echo("</tr>");
+                 }
+         echo("</table>");
+    
+     $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy WHERE imie not like "%a"';
+          echo("<li>.$sql</li>");
+          $result = $conn->query($sql);
+              echo("<table border>");
+              echo("<th>Wiek_mężczyzn</th>");
+                  while($row=$result->fetch_assoc()){ 
+                      echo("<tr>");
+                      echo("<td>".$row["wiek"]."</td>");                    
+                      echo("</tr>");
+                 }
+         echo("</table>");
+    
+    $sql='SELECT dzial, avg(YEAR(CURDATE()) - YEAR(data_urodzenia)) as a, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial';
+          echo("<li>.$sql</li>");
+          $result = $conn->query($sql);
+              echo("<table border>");
+              echo("<th>Wiek_mężczyzn</th>");
+              echo("<th>Średnia_wiek</th>");
+              echo("<th>Nazwa_działu</th>");
+                  while($row=$result->fetch_assoc()){ 
+                      echo("<tr>");
+                      echo("<td>".$row["dzial"]."</td><td>".$row["a"]."</td><td>".$row["nazwa_dzial"]."</td>");                    
+                      echo("</tr>");
+                 }
+         echo("</table>");
+
+    
+    
+    
     
   
 ?>
