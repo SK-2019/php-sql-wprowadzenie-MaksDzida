@@ -132,6 +132,37 @@ echo("<li>.$sql</li>");
             }
    
            echo("</table>");
+    
+    $sql = 'SELECT dzial, max(YEAR(CURDATE()) - YEAR(data_urodzenia)) as max, nazwa_dzial from pracownicy, organizacja where dzial=id_org group by dzial';
+echo("<li>.$sql</li>");
+    
+ $result = $conn->query($sql);
+        echo("<table border>");
+        echo("<th>dzial</th>");
+        echo("<th>Wiek - najstarsi</th>");
+        echo("<th>Nazwa_Działu</th>");
+            while($row=$result->fetch_assoc()){ 
+                 echo("<tr>");
+                   echo("<td>".$row["dzial"]."</td><td>".$row["max"]."</td><td>".$row["nazwa_dzial"]."</td>");                    
+                 echo("</tr>");
+            }
+   
+           echo("</table>");
+    
+    $sql = 'SELECT min(YEAR(CURDATE()) - YEAR(data_urodzenia)) as min, nazwa_dzial from pracownicy, organizacja where dzial=id_org and (nazwa_dzial="handel" OR nazwa_dzial="serwis") group by dzial';
+echo("<li>.$sql</li>");
+    
+ $result = $conn->query($sql);
+        echo("<table border>");
+        echo("<th>Wiek_najmłodsi</th>");
+        echo("<th>Nazwa_Działu</th>");
+            while($row=$result->fetch_assoc()){ 
+                 echo("<tr>");
+                   echo("<td>".$row["min"]."</td><td>".$row["nazwa_dzial"]."</td>");                    
+                 echo("</tr>");
+            }
+   
+           echo("</table>");
   
 
     
