@@ -16,9 +16,11 @@
     
 <?php
    require_once('connect.php');
+    
+    $sql='SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org';
      
-        echo("<li> SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org</li>");
-       $result = $conn->query('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org');
+        echo("<li>.$sql</li>");
+       $result = $conn->query($sql);
            echo("<table border=1>");
            echo("<th>Id</th>");
            echo("<th>Imie</th>");
@@ -34,8 +36,10 @@
                }
     echo("</table>");
     
-    echo("<li>SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial='serwis'</li>");
-           $result = $conn->query('SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial="serwis"');
+    $sql='SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial="serwis"';
+    
+    echo("<li>.$sql</li>");
+           $result = $conn->query($sql);
                echo("<table border=1>");
                echo("<th>Id</th>");
                echo("<th>Imie</th>");
