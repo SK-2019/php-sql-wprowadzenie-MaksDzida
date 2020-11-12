@@ -1,6 +1,9 @@
 body {
     background-color: #ffe6ff;
   }
+li {
+    margin-top: 10px;
+}
 table {
     background-color: #ffe6ff;
 }
