@@ -30,10 +30,12 @@
             }            
         echo("</table>");
      echo("<hr>");
+	
+	$sql="SELECT SUM(zarobki) as suma FROM pracownicy WHERE imie  LIKE '%a'";
     
-    echo("<li> SELECT SUM(zarobki) as suma from pracownicy where imie like %a</li>");
+    echo("<li>.$sql</li>");
 
-    $result=$conn->query("SELECT SUM(zarobki) as suma FROM pracownicy WHERE imie  LIKE '%a'");
+    $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma</th>");
             while($row=$result->fetch_assoc()){
@@ -43,10 +45,12 @@
             }            
         echo("</table>");
      echo("<hr>");
+	
+	$sql="SELECT SUM(zarobki) as suma FROM pracownicy WHERE imie NOT LIKE '%a' and (dzial=3 OR dzial=2)";
     
-     echo("<li>SELECT SUM(zarobki) as suma FROM pracownicy WHERE imie NOT LIKE '%a' and (dzial=3 OR dzial=2) </li>");
+     echo("<li>.$sql</li>");
 
-    $result=$conn->query("SELECT SUM(zarobki) as suma FROM pracownicy WHERE imie NOT LIKE '%a' and (dzial=3 OR dzial=2)");
+    $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma</th>");
             while($row=$result->fetch_assoc()){
