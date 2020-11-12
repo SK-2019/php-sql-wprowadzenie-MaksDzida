@@ -195,6 +195,24 @@ echo("<li>.$sql</li>");
    
            echo("</table>");
     
+     $sql = 'SELECT * from pracownicy where imie not like "%a" order by data_urodzenia asc limit 1';
+echo("<li>.$sql</li>");
+echo("<li>".$sql);
+    
+ $result = $conn->query($sql);
+        echo("<table border>");
+         echo("<th>ID</th>");
+        echo("<th>Imię</th>");
+        echo("<th>Dział</th>");
+        echo("<th>Zarobki</th>");
+            while($row=$result->fetch_assoc()){ 
+                 echo("<tr>");
+                   echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td>");                   
+                 echo("</tr>");
+            }
+   
+           echo("</table>");
+    
     
   
 
