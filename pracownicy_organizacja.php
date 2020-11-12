@@ -35,6 +35,8 @@ echo("<li>.$sql</li>");
             }
 
         echo("</table>");
+	echo("<hr>");
+	
     $sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and (dzial=1 or dzial=4)';
     echo("<li>.$sql</li>");
     
@@ -54,6 +56,7 @@ echo("<li>.$sql</li>");
             }
 
         echo("</table>");
+	echo("<hr>");
 	
 	 $sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie like "%a"';
 	 echo("<li>.$sql</li>");
@@ -74,6 +77,7 @@ echo("<li>.$sql</li>");
             }
 
         echo("</table>");
+	echo("<hr>");
 	
 	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie not like "%a"';
 	
@@ -95,6 +99,7 @@ echo("<li>.$sql</li>");
             }
 
         echo("</table>");
+	echo("<hr>");
 	
 	echo("<h2> Sortowanie </h2>");
 	
@@ -117,6 +122,7 @@ echo("<li>.$sql</li>");
             }
 
         echo("</table>");
+	echo("<hr>");
 	
 	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and dzial=3 order by imie asc';
 	
@@ -138,6 +144,7 @@ echo("<li>.$sql</li>");
             }
 
         echo("</table>");
+	echo("<hr>");
 	
 	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie like "%a" order by imie asc';
 	
@@ -159,6 +166,7 @@ echo("<li>.$sql</li>");
             }
 
         echo("</table>");
+	echo("<hr>");
 	
 	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie  like "%a" and (dzial = 1 or dzial=3) order by zarobki asc';
 	
@@ -180,6 +188,7 @@ echo("<li>.$sql</li>");
             }
 
         echo("</table>");
+	echo("<hr>");
 	
 	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org  and imie NOT LIKE "%a" order by  nazwa_dzial asc, zarobki asc';
 	
@@ -201,6 +210,7 @@ echo("<li>.$sql</li>");
             }
 
         echo("</table>");
+	echo("<hr>");
 	
 	echo("<h2> Limit </h2>");
 	
