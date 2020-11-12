@@ -105,10 +105,12 @@
             }            
         echo("</table>");
      echo("<hr>");
+	
+	$sql="SELECT COUNT(imie) as ilosc FROM pracownicy";
     
-     echo("<li>SELECT COUNT(imie) as ilosc FROM pracownicy</li>");
+     echo("<li>.$sql</li>");
 
-    $result=$conn->query("SELECT COUNT(imie) as ilosc FROM pracownicy");
+    $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<th>ilość</th>");
             while($row=$result->fetch_assoc()){
@@ -118,10 +120,13 @@
             }            
         echo("</table>");
      echo("<hr>");
+	
+	$sql="SELECT COUNT(imie) as ilosc FROM pracownicy WHERE imie LIKE '%a' and (dzial=1 OR dzial=3)";
+		
     
-    echo("<li>SELECT COUNT(imie) as ilosc FROM pracownicy WHERE imie LIKE '%a' and (dzial=1 OR dzial=3)</li>");
+    echo("<li>.$sql</li>");
 
-    $result=$conn->query("SELECT COUNT(imie) as ilosc FROM pracownicy WHERE imie LIKE '%a' and (dzial=1 OR dzial=3)");
+    $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<th>ilość</th>");
             while($row=$result->fetch_assoc()){
