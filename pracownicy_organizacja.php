@@ -139,9 +139,11 @@ echo("<li>.$sql</li>");
 
         echo("</table>");
 	
-	echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie like %a order by imie asc </li>");
+	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie like "%a" order by imie asc';
+	
+	echo("<li>.$sql</li>");
     
-  $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie like "%a" order by imie asc');
+  $result = $conn->query($sql);
         echo("<table border=1>");
 	echo("<th>ID</th>");
         echo("<th>Imie</th>");
@@ -158,9 +160,11 @@ echo("<li>.$sql</li>");
 
         echo("</table>");
 	
-	echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie  like %a and (dzial = 1 or dzial=3) order by zarobki asc </li>");
+	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie  like "%a" and (dzial = 1 or dzial=3) order by zarobki asc';
+	
+	echo("<li>.$sql </li>");
     
-  $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie  like "%a" and (dzial = 1 or dzial=3) order by zarobki asc');
+  $result = $conn->query($sql);
         echo("<table border=1>");
 	echo("<th>ID</th>");
         echo("<th>Imie</th>");
@@ -177,9 +181,11 @@ echo("<li>.$sql</li>");
 
         echo("</table>");
 	
-	echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie NOT LIKE %a order by  nazwa_dzial asc, zarobki asc </li>");
+	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org  and imie NOT LIKE "%a" order by  nazwa_dzial asc, zarobki asc';
+	
+	echo("<li>.$sql</li>");
     
-  $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org  and imie NOT LIKE "%a" order by  nazwa_dzial asc, zarobki asc');
+  $result = $conn->query($sql);
         echo("<table border=1>");
 	echo("<th>ID</th>");
         echo("<th>Imie</th>");
