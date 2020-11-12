@@ -16,10 +16,10 @@
     
 <?php
    require_once('connect.php');
-    
-    echo("<li> SELECT sum(zarobki) as suma from pracownicy</li>");
+    $sql="SELECT sum(zarobki) as suma from pracownicy";
+    echo("<li>.$sql</li>");
 
-    $result=$conn->query("SELECT sum(zarobki) as suma from pracownicy");
+    $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<th>Suma</th>");
     
