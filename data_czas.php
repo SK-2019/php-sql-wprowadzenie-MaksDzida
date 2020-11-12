@@ -197,8 +197,7 @@ echo("<li>.$sql</li>");
     
      $sql = 'SELECT * from pracownicy where imie not like "%a" order by data_urodzenia asc limit 1';
 echo("<li>.$sql</li>");
-echo("<li>".$sql);
-    
+
  $result = $conn->query($sql);
         echo("<table border>");
          echo("<th>ID</th>");
