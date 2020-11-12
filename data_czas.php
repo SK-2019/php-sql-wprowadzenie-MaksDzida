@@ -56,6 +56,30 @@
        
                echo("</table>");
     
+    $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org';
+            echo("<li>.$sql</li>");
+            $result = $conn->query($sql);
+                echo("<table border>");
+                echo("<th>Wiek_wszystkich_pracowników</th>");
+                    while($row=$result->fetch_assoc()){ 
+                        echo("<tr>");
+                        echo("<td>".$row["wiek"]."</td>");                    
+                        echo("</tr>");
+                   }
+           echo("</table>");
+           
+           $sql='SELECT sum(YEAR(CURDATE()) - YEAR(data_urodzenia)) as wiek FROM pracownicy, organizacja WHERE dzial=id_org AND nazwa_dzial="handel"';
+           echo("<li>.$sql</li>");
+           $result = $conn->query($sql);
+               echo("<table border>");
+               echo("<th>Wiek_pracowników_handel</th>");
+                   while($row=$result->fetch_assoc()){ 
+                       echo("<tr>");
+                       echo("<td>".$row["wiek"]."</td>");                    
+                       echo("</tr>");
+                  }
+          echo("</table>");
+    
     
   
 ?>
