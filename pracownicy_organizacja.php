@@ -233,6 +233,7 @@ echo("<li>.$sql</li>");
                 }
     
             echo("</table>");
+	echo("<hr>");
 	
 	
 	
@@ -255,6 +256,7 @@ echo("<li>.$sql</li>");
                 }
     
             echo("</table>");
+	
 	
 	
     
