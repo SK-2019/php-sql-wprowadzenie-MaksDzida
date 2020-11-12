@@ -224,7 +224,7 @@ echo("<li>SELECT * FROM pracownicy</li>");
     
             echo("</table>");
 	
-	$sql="SELECT * FROM pracownicy, organizacja WHERE dzial=id_org AND (dzial=4 or dzial=2) order by zarobki desc limit 3"
+	$sql="SELECT * FROM pracownicy, organizacja WHERE dzial=id_org AND (dzial=4 or dzial=2) order by zarobki desc limit 3";
 	echo("<li>.$sql</li>");
         $result = $conn->query($sql); 
             echo("<table border=1>");
