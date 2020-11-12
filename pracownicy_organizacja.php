@@ -55,9 +55,10 @@ echo("<li>.$sql</li>");
 
         echo("</table>");
 	
-	 echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie like %a </li>");
+	 $sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie like "%a"';
+	 echo("<li>.$sql</li>");
     
-  $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie like "%a"');
+  $result = $conn->query($sql);
         echo("<table border=1>");
 	echo("<th>ID</th>");
         echo("<th>Imie</th>");
@@ -74,9 +75,11 @@ echo("<li>.$sql</li>");
 
         echo("</table>");
 	
-	 echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie not like %a </li>");
+	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie not like "%a"';
+	
+	 echo("<li>.$sql</li>");
     
-  $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie not like "%a"');
+  $result = $conn->query($sql);
         echo("<table border=1>");
 	echo("<th>ID</th>");
         echo("<th>Imie</th>");
