@@ -35,10 +35,10 @@ echo("<li>.$sql</li>");
             }
 
         echo("</table>");
+    $sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and (dzial=1 or dzial=4)';
+    echo("<li>.$sql</li>");
     
-    echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and (dzial=1 or dzial=4)</li>");
-    
-  $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and (dzial=1 or dzial=4)');
+  $result = $conn->query($sql);
         echo("<table border=1>");
 	echo("<th>ID</th>");
         echo("<th>Imie</th>");
