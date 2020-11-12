@@ -98,9 +98,10 @@ echo("<li>.$sql</li>");
 	
 	echo("<h2> Sortowanie </h2>");
 	
-	echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org order by imie desc</li>");
+	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org order by imie desc';
+	echo("<li>.$sql</li>");
     
-  $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org order by imie desc');
+  $result = $conn->query($sql);
         echo("<table border=1>");
 	echo("<th>ID</th>");
         echo("<th>Imie</th>");
@@ -117,9 +118,11 @@ echo("<li>.$sql</li>");
 
         echo("</table>");
 	
-	echo("<li>SELECT * FROM pracownicy, organizacja WHERE dzial = id_org order by imie asc</li>");
+	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and dzial=3 order by imie asc';
+	
+	echo("<li>.$sql</li>");
     
-  $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and dzial=3 order by imie asc');
+  $result = $conn->query($sql);
         echo("<table border=1>");
 	echo("<th>ID</th>");
         echo("<th>Imie</th>");
