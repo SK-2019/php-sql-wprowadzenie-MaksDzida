@@ -204,8 +204,11 @@ echo("<li>.$sql</li>");
 	
 	echo("<h2> Limit </h2>");
 	
-	  echo("<li> SELECT * FROM pracownicy, organizacja WHERE dzial=id_org AND dzial=4 order by zarobki desc limit 2</li>");
-        $result = $conn->query('SELECT * FROM pracownicy, organizacja WHERE dzial=id_org AND dzial=4 order by zarobki desc limit 2'); 
+	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial=id_org AND dzial=4 order by zarobki desc limit 2';
+		
+	
+	  echo("<li>.$sql</li>");
+        $result = $conn->query($sql);
             echo("<table border=1>");
             echo("<th>Id</th>");
             echo("<th>Imie</th>");
@@ -220,6 +223,8 @@ echo("<li>.$sql</li>");
                 }
     
             echo("</table>");
+	
+	
 	
 	
 	
