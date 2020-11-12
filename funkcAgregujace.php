@@ -60,10 +60,12 @@
             }            
         echo("</table>");
      echo("<hr>");
+	
+	$sql="SELECT AVG(zarobki) as srednia FROM pracownicy WHERE imie LIKE '%a'";
     
-     echo("<li>SELECT AVG(zarobki) as srednia FROM pracownicy WHERE imie LIKE %a </li>");
+     echo("<li>.$sql</li>");
 
-    $result=$conn->query("SELECT AVG(zarobki) as srednia FROM pracownicy WHERE imie LIKE '%a'");
+    $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<th>Średnia</th>");
             while($row=$result->fetch_assoc()){
@@ -73,10 +75,12 @@
             }            
         echo("</table>");
      echo("<hr>");
+	
+	$sql="SELECT AVG(zarobki) as srednia FROM pracownicy WHERE dzial=4";
     
-    echo("<li>SELECT AVG(zarobki) as srednia FROM pracownicy WHERE dzial=4 </li>");
+    echo("<li>.$sql</li>");
 
-    $result=$conn->query("SELECT AVG(zarobki) as srednia FROM pracownicy WHERE dzial=4");
+    $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<th>Średnia</th>");
             while($row=$result->fetch_assoc()){
@@ -86,10 +90,12 @@
             }            
         echo("</table>");
      echo("<hr>");
+	
+	$sql="SELECT AVG(zarobki)as srednia FROM pracownicy WHERE imie NOT LIKE '%a' and (dzial=1 OR dzial=2)";
     
-     echo("<li>SELECT AVG(zarobki) as srednia FROM pracownicy WHERE imie NOT LIKE %a and (dzial=1 OR dzial=2) </li>");
+     echo("<li>.$sql</li>");
 
-    $result=$conn->query("SELECT AVG(zarobki)as srednia FROM pracownicy WHERE imie NOT LIKE '%a' and (dzial=1 OR dzial=2)");
+    $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<th>Średnia</th>");
             while($row=$result->fetch_assoc()){
