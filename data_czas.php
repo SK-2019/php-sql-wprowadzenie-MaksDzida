@@ -282,20 +282,19 @@ echo("<li>.$sql</li>");
 echo("</table>");
     echo("<hr>");
     
-     $sql2 = 'SELECT curtime(4) as godzina';
-echo("<li>".$sql2);
+ $sql2 = ("SELECT curtime(4)");
+            echo("<li>.$sql2</li>");
+            $result=$conn->query($sql2);
+            include("connect.php");
+                      echo("<table border=1>");
+                     echo("<th>Curtime(4)</th>");
+                     while($row=$result->fetch_assoc()) {
+                            echo("<tr>");
+                                  echo("<td>".$row["curtime(4)"]."</td>");
+                            echo("</tr>");
+                            }
+                         echo("</table>");
 
-
-$result = $conn->query($sql2);
-       echo("<table border>");
-       echo("<th>Godzina</th>");
-    while($row=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$row['godzina']."</td>");
-        echo("</tr>");
-    }
-echo("</table>");
-        echo("<hr>");
     
     
     $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%Y-%M-%W") from pracownicy';
