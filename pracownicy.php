@@ -12,7 +12,7 @@
      <a class="nav_link" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
     <a class="nav_link" href="data_czas.php">Data i Czas</a>
 </div>
-<h1>Maksymilian Dzida 2Ti</h1>
+<h1>Maks Dzida</h1>
 
 <?php
     require_once('connect.php');
