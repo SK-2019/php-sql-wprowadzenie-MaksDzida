@@ -353,7 +353,7 @@ echo("</table>");
     echo("<hr>");
     
     $sql = 'SELECT Count(DATE_FORMAT(data_urodzenia, "%W")) as ilosc FROM pracownicy where DATE_FORMAT(data_urodzenia, "%W")="Monday"';
-echo("<li>.$sql/li>");
+echo("<li>.$sql</li>");
 
 
 
