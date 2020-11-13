@@ -213,26 +213,6 @@
 	
 	echo("<h1>Having:</h1>");
 	
-	  $sql = 'SELECT sum(zarobki) as suma, dzial, nazwa_dzial from pracownicy, organizacja where dzial=id_org GROUP BY dzial HAVING sum(zarobki)<28';
-echo("<li>.$sql</li>");
-
-
-
- $result = $conn->query($sql);
-        echo("<table>");
-        echo("<th>Suma</th>");
-	echo("<th>Dzial</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                echo("<tr>");
-                    echo("<td>".$row["suma"]."</td><td>".$row["dzial"]."</td><td>".$row["nazwa_dzial"]."</td>"); 
-
-                echo("</tr>");
-            }
-
-        echo("</table>");
-
-	echo("<hr>");
 	
 	 echo("<li> SELECT avg(zarobki) as srednia_zarobki, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like '%a') group by dzial having avg(zarobki)>30</li>");
                 $result = $conn->query('SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like "%a") group by dzial having avg(zarobki)>30');
