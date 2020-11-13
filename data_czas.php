@@ -248,11 +248,10 @@ echo("</table>");
     
 $sql1 = 'SET lc_time_names = "pl_PL"';
    $sql2 = 'SELECT DATE_FORMAT(CURDATE(), "%W")';
-echo("<h2>Zadanie 2 - Wypisz dzisiejszą nazwę dnia po polsku (np. poniedziałek).</h2>");
 echo("<li>".$sql1);
 echo("<li>".$sql2);
 
-$conn = new mysqli("remotemysql.com","17wQgisS2h","QCoNVtdlto","17wQgisS2h");
+
 $result = $conn->query($sql1);
 $result = $conn->query($sql2);
        echo("<table border>");
@@ -283,12 +282,11 @@ echo("<li>.$sql</li>");
 echo("</table>");
     echo("<hr>");
     
-       $sql = 'SELECT curtime() as godzina';
-echo("<li>.$sql</li>");
+     $sql2 = 'SELECT curtime(4) as godzina';
+echo("<li>".$sql2);
 
 
-
-$result = $conn->query($sql);
+$result = $conn->query($sql2);
        echo("<table border>");
        echo("<th>Godzina</th>");
     while($row=$result->fetch_assoc()){
