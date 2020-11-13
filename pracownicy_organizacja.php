@@ -257,6 +257,24 @@ echo("<li>.$sql</li>");
     
             echo("</table>");
 	
+	$sql='SELECT * FROM pracownicy, organizacja WHERE dzial=id_org order by data_urodzenia asc limit 1';
+        echo("<li>.$sql</li>");
+        $result = $conn->query($sql); 
+            echo("<table border=1>");
+            echo("<th>Id</th>");
+            echo("<th>Imie</th>");
+            echo("<th>Dział</th>");
+            echo("<th>Nazwa_działu</th>");
+            echo("<th>Zarobki</th>");
+            echo("<th>Data_urodzenia</th>");
+                while($row=$result->fetch_assoc()){ 
+                    echo("<tr>");
+                    echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["nazwa_dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td>"); 
+                    echo("</tr>");
+                }
+    
+            echo("</table>");
+	
 	
 	
     
