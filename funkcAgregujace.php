@@ -138,10 +138,12 @@
      echo("<hr>");
     
     echo("<h2> Group By </h2>");
-    
-    echo("<li>SELECT sum(zarobki),nazwa_dzial FROM pracownicy,organizacja WHERE dzial = id_org GROUP BY dzial</li>");
 	
-         $result = $conn->query('SELECT nazwa_dzial, sum(zarobki) as sz FROM pracownicy, organizacja WHERE dzial=id_org group by dzial'); 
+	$sql='SELECT nazwa_dzial, sum(zarobki) as sz FROM pracownicy, organizacja WHERE dzial=id_org group by dzial';
+    
+    echo("<li>.$sql</li>");
+	
+         $result = $conn->query($sql);
              echo("<table border=1>");
              echo("<th>Nazwa_działu</th>");
               echo("<th>Suma_zarobków</th>");
@@ -153,8 +155,10 @@
 	 echo("</table>");
 	 echo("<hr>");
 	
-	  echo("<li> SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial</li>");
-                $result = $conn->query('SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial'); 
+	$sql='SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial';
+	
+	  echo("<li>.$sql</li>");
+                $result = $conn->query($sql);
                 echo("<table border=1>");
                 echo("<th>Nazwa_działu</th>");
                 echo("<th>Ilość</th>");
@@ -166,8 +170,10 @@
 	echo("</table>");
 	echo("<hr>");
 	
-	echo("<li> SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial</li>");
-                $result = $conn->query('SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial'); 
+	$sql='SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org group by dzial';
+	
+	echo("<li>.$sql</li>");
+                $result = $conn->query($sql);
                 echo("<table border=1>");
                 echo("<th>Nazwa_działu</th>");
                 echo("<th>Średnia</th>");
