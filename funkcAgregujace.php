@@ -211,7 +211,7 @@
 	
 	echo("<h2> Klauzula Having </h2>");
 	
-	echo("<h1>Having:</h1>");
+	
 	
 	
 	 echo("<li> SELECT avg(zarobki) as srednia_zarobki, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like '%a') group by dzial having avg(zarobki)>30</li>");
