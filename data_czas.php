@@ -279,7 +279,7 @@ echo("<li>.$sql</li>");
 echo("</table>");
     echo("<hr>");
     
-    $sql = 'SELECT curtime(4)';
+    $sql = 'SELECT curtime()';
 echo("<li>.$sql</li>");
 
 
@@ -293,6 +293,43 @@ echo("<li>.$sql</li>");
     }
 echo("</table>");
     echo("<hr>");
+    
+    $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%Y-%M-%W") from pracownicy';
+echo("<li>.$sql</li>");
+
+
+
+ $result = $conn->query($sql);
+       echo("<table border>");
+       echo("<th>ID</th>");
+       echo("<th>Imie</th>");
+       echo("<th>Dzial</th>");
+       echo("<th>Zarobki</th>");
+       echo("<th>Data urodzenia</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['DATE_FORMAT(data_urodzenia,"%Y-%M-%W")']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+    echo("<hr>");
+    
+       $sql = 'SELECT imie, DATEDIFF(CURDATE(),data_urodzenia) as dni, DATEDIFF(CURDATE(),data_urodzenia)*24 as godziny, DATEDIFF(CURDATE(),data_urodzenia)*24*60 as minuty FROM pracownicy';
+echo("<li>.$sql</li>");
+
+ $result = $conn->query($sql);
+       echo("<table border>");
+       echo("<th>Imie</th>");
+       echo("<th>Dni</th>");
+       echo("<th>Godziny</th>");
+       echo("<th>Minuty</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row['imie']."</td><td>".$row['dni']."</td><td>".$row['godziny']."</td><td>".$row['minuty']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+     echo("<hr>");
   
     
     
