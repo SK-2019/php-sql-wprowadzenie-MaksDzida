@@ -76,7 +76,7 @@ $sql="SELECT * from pracownicy where dzial=2";
    
    $sql="SELECT * from pracownicy where zarobki<30";
    
-    echo("<li>.$sql/li>");
+    echo("<li>.$sql</li>");
     $result=$conn->query($sql);
 
        echo("<table border=1>");
