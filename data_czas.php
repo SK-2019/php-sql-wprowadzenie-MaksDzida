@@ -382,6 +382,36 @@ echo("<li>.$sql/li>");
         echo("</tr>");
     }
 echo("</table>");
+     echo("<hr>");
+    
+   
+                $sql1 = ("SET lc_time_names = 'pl_PL'");
+                $sql2 = ("SELECT DATE_FORMAT(data_urodzenia,'%W') as dzien, Count(DATE_FORMAT(data_urodzenia,'%W')) as ilosc FROM pracownicy group by dzien ORDER BY 
+                             CASE
+                                  WHEN dzien = 'Poniedziałek' THEN 1
+                                  WHEN dzien = 'Wtorek' THEN 2
+                                  WHEN dzien = 'Środa' THEN 3
+                                  WHEN dzien= 'Czwartek' THEN 4
+                                  WHEN dzien = 'Piątek' THEN 5
+                                  WHEN dzien = 'Sobota' THEN 6
+                                  WHEN dzien = 'Niedziela' THEN 7
+                             END ASC");
+                echo("<li>".$sql2."</li>");
+                
+                $result=$conn->query($sql1);
+                $result=$conn->query($sql2);
+                include("connect.php");
+                        echo("<table border=1>");
+                        echo("<th>dzien</th>");
+                        echo("<th>ilosc</th>");
+
+
+                        while($row=$result->fetch_assoc()) {
+                                echo("<tr>");
+                                    echo("<td>".$row["dzien"]."</td><td>".$row["ilosc"]."</td>");
+                                echo("</tr>");
+                            }
+                        echo("</table>");
     
     
   
