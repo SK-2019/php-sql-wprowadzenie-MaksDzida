@@ -331,8 +331,8 @@ echo("<li>.$sql</li>");
 echo("</table>");
      echo("<hr>");
     
-     $sql = 'SELECT DATE_FORMAT("2003-10-21", "%j") as DataUrodzenia';
-echo("<h2>.$sql</h2>");
+     $sql = 'SELECT DATE_FORMAT("2003-10-02", "%j") as DataUrodzenia';
+echo("<li>.$sql</li>");
 
 
  $result = $conn->query($sql);
