@@ -33,6 +33,8 @@ echo("<li>.$sql</li>");
                 echo("</tr>");
             }
     echo("</table>");
+   echo("<hr>");
+   
 $sql="SELECT * from pracownicy where dzial=2";
    
    echo("<li>.$sql</li>");
@@ -53,6 +55,7 @@ $sql="SELECT * from pracownicy where dzial=2";
    
 
         echo("</table>");
+   echo("<hr>");
    
    $sql="SELECT * from pracownicy where (dzial=2 or dzial=3)";
    
@@ -73,6 +76,7 @@ $sql="SELECT * from pracownicy where dzial=2";
             }
 
         echo("</table>");
+   echo("<hr>");
    
    $sql="SELECT * from pracownicy where zarobki<30";
    
