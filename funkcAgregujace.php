@@ -186,8 +186,10 @@
         echo("</table>");  
 	echo("<hr>");
 	
-	                echo("<li> SELECT sum(zarobki) as suma, if(imie like '%a', 'Kobiety', 'Mężczyźni') as plec FROM pracownicy group by plec</li>");
-                $result = $conn->query('SELECT sum(zarobki) as suma, if(imie like "%a", "Kobiety", "Mężczyźni") as plec FROM pracownicy group by plec'); 
+	$sql='SELECT sum(zarobki) as suma, if(imie like "%a", "Kobiety", "Mężczyźni") as plec FROM pracownicy group by plec';
+	
+	                echo("<li>.$sql</li>");
+                $result = $conn->query($sql);
                 echo("<table border=1>");
                 echo("<th>Suma</th>");
                 echo("<th>Płeć</th>");
@@ -201,8 +203,10 @@
                 echo("</table>");
 	echo("<hr>");
 	
-	echo("<li> SELECT avg(zarobki) as srednia, if(imie like '%a', 'Kobiety', 'Mężczyźni') as plec FROM pracownicy group by plec</li>");
-                $result = $conn->query('SELECT avg(zarobki) as srednia, if(imie like "%a", "Kobiety", "Mężczyźni") as plec FROM pracownicy group by plec'); 
+	$sql='SELECT avg(zarobki) as srednia, if(imie like "%a", "Kobiety", "Mężczyźni") as plec FROM pracownicy group by plec';
+	
+	echo("<li>.$sql</li>");
+                $result = $conn->query($sql);
                 echo("<table border=1>");
                 echo("<th>Średnia</th>");
                 echo("<th>Płeć</th>");
