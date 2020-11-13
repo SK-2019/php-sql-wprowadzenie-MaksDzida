@@ -175,22 +175,7 @@ echo("<li>.$sql</li>");
            echo("</table>");
     echo("<hr>");
    
-    $sql = 'Select min(year(curdate())-year(data_urodzenia)) as minwiek, nazwa_dzial from pracownicy, organizacja where dzial=id_org and (nazwa_dzial="handel" or nazwa_dzial="serwis") group by nazwa_dzial';
-echo("<li>.$sql</li>");
     
- $result = $conn->query($sql);
-        echo("<table border>");
-        echo("<th>Wiek</th>");
-        echo("<th>Imię</th>");
-        echo("<th>Nazwa_Działu</th>");
-            while($row=$result->fetch_assoc()){ 
-                 echo("<tr>");
-                   echo("<td>".$row["minwiek"]."</td><td>".$row["imie"]."</td><td>".$row["nazwa_dzial"]."</td>");                    
-                 echo("</tr>");
-            }
-   
-           echo("</table>");
-    echo("<hr>");
     
     $sql = 'SELECT imie, DATEDIFF(CURDATE(),data_urodzenia) as dni_zycia from pracownicy';
 echo("<li>.$sql</li>");
