@@ -224,6 +224,28 @@ echo("<li>.$sql</li>");
             }
    
            echo("</table>");
+     echo("<hr>");
+    
+    echo("<h2>Formatowanie</h2>");
+    
+    $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%W") from pracownicy';
+echo("<li>.$sql</li>");
+
+ $result = $conn->query($sql);
+       echo("<table border>");
+       echo("<th>ID</th>");
+       echo("<th>Imie</th>");
+       echo("<th>Dzial</th>");
+       echo("<th>Zarobki</th>");
+       echo("<th>Data urodzenia</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['DATE_FORMAT(data_urodzenia,"%W")']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+    
+    
     
     
   
