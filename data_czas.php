@@ -282,8 +282,9 @@ echo("<li>.$sql</li>");
 echo("</table>");
     echo("<hr>");
     
- $sql2 = ("SELECT curtime(4)");
-            echo("<li>.$sql2</li>");
+   require("connect.php");
+            $sql2 = ("SELECT curtime(4)");
+            echo("<h2>ZADANIE 4: $sql2</h2>");
             $result=$conn->query($sql2);
             include("connect.php");
                       echo("<table border=1>");
@@ -294,7 +295,6 @@ echo("</table>");
                             echo("</tr>");
                             }
                          echo("</table>");
-
     
     
     $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%Y-%M-%W") from pracownicy';
