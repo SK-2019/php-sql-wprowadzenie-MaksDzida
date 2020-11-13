@@ -277,6 +277,23 @@ echo("<li>.$sql</li>");
         echo("</tr>");
     }
 echo("</table>");
+    echo("<hr>");
+    
+    $sql = 'SELECT curtime()';
+echo("<li>.$sql</li>");
+
+
+ $result = $conn->query($sql);
+       echo("<table border>");
+       echo("<th>Data</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row['curtime()']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+    echo("<hr>");
+  
     
     
     
