@@ -244,6 +244,39 @@ echo("<li>.$sql</li>");
         echo("</tr>");
     }
 echo("</table>");
+     echo("<hr>");
+    
+    $sql = 'SELECT DATE_FORMAT(CURDATE(), "%W")';
+echo("<li>.$sql</li>");
+
+
+ $result = $conn->query($sql);
+       echo("<table border>");
+       echo("<th>Dzień</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row['DATE_FORMAT(CURDATE(), "%W")']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+      echo("<hr>");
+    
+     $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%M") from pracownicy';
+echo("<li>.$sql</li>");
+
+ $result = $conn->query($sql);
+       echo("<table border>");
+       echo("<th>ID</th>");
+       echo("<th>Imie</th>");
+       echo("<th>Dzial</th>");
+       echo("<th>Zarobki</th>");
+       echo("<th>Data urodzenia</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['DATE_FORMAT(data_urodzenia,"%M")']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
     
     
     
