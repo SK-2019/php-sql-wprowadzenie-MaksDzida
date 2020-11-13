@@ -330,6 +330,23 @@ echo("<li>.$sql</li>");
     }
 echo("</table>");
      echo("<hr>");
+    
+     $sql = 'SELECT DATE_FORMAT("2003-10-21", "%j") as DataUrodzenia';
+echo("<h2>.$sql</h2>");
+
+
+ $result = $conn->query($sql);
+       echo("<table border>");
+       echo("<th>Data_Urodzenia</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row['DataUrodzenia']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+    echo("<hr>");
+    
+    
   
     
     
