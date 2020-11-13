@@ -284,7 +284,7 @@ echo("</table>");
     
    require("connect.php");
             $sql2 = ("SELECT curtime(4)");
-            echo("<h2>ZADANIE 4: $sql2</h2>");
+            echo("<li>.$sql2</li>");
             $result=$conn->query($sql2);
             include("connect.php");
                       echo("<table border=1>");
