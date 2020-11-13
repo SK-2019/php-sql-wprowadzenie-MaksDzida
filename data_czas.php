@@ -184,7 +184,7 @@ echo("<li>.$sql</li>");
         echo("<th>Nazwa_Działu</th>");
             while($row=$result->fetch_assoc()){ 
                  echo("<tr>");
-                   echo("<td>".$row["imie"]."</td><td>".$row["minwiek"]."</td><td>".$row["nazwa_dzial"]."</td>");                    
+                   echo("<td>".$row["minwiek"]."</td><td>".$row["imie"]."</td><td>".$row["nazwa_dzial"]."</td>");                    
                  echo("</tr>");
             }
    
