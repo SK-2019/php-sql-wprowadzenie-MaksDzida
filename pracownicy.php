@@ -32,6 +32,7 @@ echo("<li>.$sql</li>");
 
                 echo("</tr>");
             }
+    echo("</table>");
 $sql="SELECT * from pracownicy where dzial=2";
    
    echo("<li>.$sql</li>");
@@ -49,6 +50,7 @@ $sql="SELECT * from pracownicy where dzial=2";
 
                 echo("</tr>");
             }
+   
 
         echo("</table>");
    
