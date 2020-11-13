@@ -279,20 +279,22 @@ echo("<li>.$sql</li>");
 echo("</table>");
     echo("<hr>");
     
-    $sql = 'SELECT curtime()';
+       $sql = 'SELECT curtime() as godzina';
 echo("<li>.$sql</li>");
 
 
- $result = $conn->query($sql);
+
+$result = $conn->query($sql);
        echo("<table border>");
-       echo("<th>Data</th>");
+       echo("<th>Godzina</th>");
     while($row=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$row['curtime()']."</td>");
+        echo("<td>".$row['godzina']."</td>");
         echo("</tr>");
     }
 echo("</table>");
-    echo("<hr>");
+        echo("<hr>");
+    
     
     $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%Y-%M-%W") from pracownicy';
 echo("<li>.$sql</li>");
