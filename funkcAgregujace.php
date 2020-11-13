@@ -221,11 +221,13 @@
 	
 	echo("<h2> Klauzula Having </h2>");
 	
+	$sql='SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like "%a") group by dzial having avg(zarobki)>30';
 	
 	
 	
-	 echo("<li> SELECT avg(zarobki) as srednia_zarobki, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like '%a') group by dzial having avg(zarobki)>30</li>");
-                $result = $conn->query('SELECT avg(zarobki) as srednia, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) AND (imie not like "%a") group by dzial having avg(zarobki)>30');
+	
+	 echo("<li>.$sql</li>");
+                $result = $conn->query($sql);
                 echo("<table border=1>");
                 echo("<th>Nazwa_działu</th>");
                 echo("<th>Średnia</th>");
@@ -237,8 +239,10 @@
                 echo("</table>");
 	echo("<hr>");
 	
-	echo("<li>SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>3</li>");
-                $result = $conn->query('SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>3');
+	$sql='SELECT count(imie) as ilosc, nazwa_dzial FROM pracownicy, organizacja WHERE (dzial=id_org) group by dzial having count(imie)>3';
+	
+	echo("<li>.$sql</li>");
+                $result = $conn->query($sql);
                 echo("<table border=1>");
                 echo("<th>Ilość</th>");
                 echo("<th>Nazwa_działu</th>");
