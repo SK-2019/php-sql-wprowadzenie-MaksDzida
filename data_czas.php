@@ -279,7 +279,7 @@ echo("<li>.$sql</li>");
 echo("</table>");
     echo("<hr>");
     
-    $sql = 'SELECT curtime()';
+    $sql = 'SELECT curtime(4)';
 echo("<li>.$sql</li>");
 
 
