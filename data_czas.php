@@ -331,7 +331,7 @@ echo("<li>.$sql</li>");
 echo("</table>");
      echo("<hr>");
     
-     $sql = 'SELECT DATE_FORMAT("2003-10-02", "%j") as DataUrodzenia';
+     $sql = 'SELECT DATE_FORMAT("2003-10-21", "%j") as DataUrodzenia';
 echo("<li>.$sql</li>");
 
 
@@ -359,6 +359,22 @@ echo("<li>.$sql</li>");
     while($row=$result->fetch_assoc()){
         echo("<tr>");
         echo("<td>".$row['imie']."</td><td>".$row['dzien']."</td><td>".$row['data_urodzenia']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+    echo("<hr>");
+    
+    $sql = 'SELECT Count(DATE_FORMAT(data_urodzenia, "%W")) as ilosc FROM pracownicy where DATE_FORMAT(data_urodzenia, "%W")="Monday"';
+echo("<li>.$sql/li>");
+
+
+
+ $result = $conn->query($sql);
+       echo("<table border>");
+       echo("<th>Ilość</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row['ilosc']."</td>");
         echo("</tr>");
     }
 echo("</table>");
