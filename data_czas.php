@@ -346,6 +346,23 @@ echo("<h2>.$sql</h2>");
 echo("</table>");
     echo("<hr>");
     
+    $sql = 'SELECT DATE_FORMAT(data_urodzenia,"%W") as dzien, imie, data_urodzenia FROM pracownicy ORDER BY CASE WHEN dzien = "Monday" THEN 1 WHEN dzien = "Tuesday" THEN 2 WHEN dzien = "Wednesday" THEN 3 WHEN dzien= "Thursday" THEN 4 WHEN dzien = "Friday" THEN 5 WHEN dzien = "Saturday" THEN 6 WHEN dzien = "Sunday" THEN 7 END ASC';
+echo("<li>.$sql</li>");
+
+
+
+ $result = $conn->query($sql);
+       echo("<table border>");
+       echo("<th>Imie</th>");
+       echo("<th>Dzień</th>");
+  echo("<th>Data_urodzenia</th>");
+    while($row=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$row['imie']."</td><td>".$row['dzien']."</td><td>".$row['data_urodzenia']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+    
     
   
     
