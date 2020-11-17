@@ -5,6 +5,11 @@
 </head>
 <body>
     
+    <form action="strona.php" method="POST">
+     <input type="text" name="asd"></br>
+     <input type="submit" value="wyślij do strona.php">
+  </form>
+    
 <strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
 <div class="nav">
    <a class="nav_link" href="index.php">Strona</a>
