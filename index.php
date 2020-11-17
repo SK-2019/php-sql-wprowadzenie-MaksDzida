@@ -5,10 +5,14 @@
 </head>
 <body>
     
-    <form action="strona.php" method="POST">
-     <input type="text" name="asd"></br>
-     <input type="submit" value="wyślij do strona.php">
-  </form>
+     <form action="strona.php" method="POST">
+        <input type="text" name="id"></br>
+        <input type="text" name="imie"></br>
+        <input type="text" name="dzial"></br>
+        <input type="text" name="zarobki"></br>
+        <input type="text" name="Data_urodzenia"></br>
+        <input type="submit" value="Szukaj">
+    </form>
     
 <strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
 <div class="nav">
