@@ -4,7 +4,7 @@ echo($_POST['Imie']);
 echo($_POST['Nazwisko']);
 
 require_once('conn.php');
-  $sql = "INSERT INTO `pracownicy`(`id_pracownicy`, `imie`, `dzial`, `zarobki`, `data_urodzenia`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5])
+  $sql = "INSERT INTO pracownicy(`id_pracownicy`, `imie`, `dzial`, `zarobki`, `data_urodzenia`) VALUES(NULL,'.$_POST['Imie'].',"","","")";
   
   
   if ($conn->query($sql) === TRUE) {
