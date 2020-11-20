@@ -8,7 +8,7 @@
   
   
   if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Pracownik został usunięty poprawnie!";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
