@@ -1,10 +1,12 @@
 <?php
 
-echo("<li>Imie: ".$_POST['Imie']."</li>");
-echo("<li>Nazwisko: ".$_POST['Nazwisko']."</li>");
+echo("<li>Imie: ".$_POST['imie']."</li>");
+echo("<li>Dzial: ".$_POST['dzial']."</li>");
+echo("<li>Zarobki: ".$_POST['zarobki']."</li>");
+echo("<li>Data urodzenia: ".$_POST['data_ur']."</li>");
 
 require_once("connect.php");
-  $sql = "INSERT INTO pracownicy(`id_pracownicy`, `imie`, `dzial`, `zarobki`, `data_urodzenia`) VALUES(NULL,'".$_POST['Imie']."',1,25,'1999-01-01')";
+  $sql = "INSERT INTO pracownicy(`id_pracownicy`, `imie`, `dzial`, `zarobki`, `data_urodzenia`) VALUES(NULL,'".$_POST['Imie']."','".$_POST['dzial']."','".$_POST['zarobki']."' ,'".$_POST['data_ur']."')";
   
   
   if ($conn->query($sql) === TRUE) {
