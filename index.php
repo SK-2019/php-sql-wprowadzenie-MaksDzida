@@ -15,6 +15,7 @@
    <a class="nav_link" href="data_czas.php">Data i Czas</a>
      <a class="nav_link" href="formularz.html">Formularz</a>
     <a class="nav_link" href="daneDoBazy.html">Dodaj Dane</a>
+    <a class="nav_link" href="function.php">Funkcja</a>
 </div>
  <h1>Maks Dzida</h1>   
     
