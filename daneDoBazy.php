@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width">
 </head>
 <body>
   
    <form action="insert.php" method="POST">
-             <input type="text" name="imie" placeholder="imie"></br>
-        <input type="text" name="dzial" placeholder="dzial" ></br>
-   <input type="text" name="zarobki" placeholder="zarobki"></br>
-   <input type="date" name="data_ur" ></br>
+        <input type="text" name="imie" placeholder="imie"><br>
+        <input type="text" name="dzial" placeholder="dzial" ><br>
+   <input type="text" name="zarobki" placeholder="zarobki"><br>
+   <input type="date" name="data_ur" ><br>
    <input type="submit" value="Dodaj">
    </form>
   <br>
@@ -36,12 +35,13 @@
                     echo("<th>Dzial</th>");
                     echo("<th>Zarobki</th>");
                     echo("<th>Data_urodzenia</th>");
+                    echo("<th>del</th>");
                         while($row=$result->fetch_assoc()){
                             echo("<tr>");
                             echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td>");
-                            echo("<td><form method=POST action=delete.php>");
+                            echo("<td><form method=POST action='delete.php'>");
                             echo("<input type='hidden' name='id' value='".$row['id_pracownicy']."'>");
-                            echo("<input type=submit value=X>");
+                            echo("<input type=submit value='X'>");
                             echo("</form></td>");                       
                             echo("</tr>");
                            }
