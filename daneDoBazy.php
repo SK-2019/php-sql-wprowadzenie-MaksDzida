@@ -41,7 +41,8 @@
                             echo("<td><form method=POST action=delete.php>");
                             echo("<input type='hidden' name='id' value=".$row['id_pracownicy'].">");
                             echo("<input type=submit value=X>");
-                        echo("</form></td>");
-                            echo("</tr>");}
+                            echo("</form></td>");
+                        }
+                            echo("</tr>");
                 echo("</table>");
         ?>
