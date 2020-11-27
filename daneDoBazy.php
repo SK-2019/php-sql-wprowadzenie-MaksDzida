@@ -27,7 +27,7 @@
 </html>
 
  <?php
-                require_  once("connect.php");
+                require_ once("connect.php");
                 $result=$conn->query("Select * from pracownicy");
                 echo("<table border=1>");
                     echo("<th>Id</th>");
