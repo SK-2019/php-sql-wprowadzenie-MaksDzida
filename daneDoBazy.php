@@ -17,7 +17,10 @@
   <br>
   <br>
 <h1>Usuwanie Pracownika</h1>
-  <?php
+<form action="delete.php" method="POST">
+    <input type="text" name="id" placeholder="ID"></br>
+   <input type="submit" value="Usuń">
+  
                
   </body>
 </html>
