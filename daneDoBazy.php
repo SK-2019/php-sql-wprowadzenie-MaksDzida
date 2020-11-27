@@ -40,8 +40,8 @@
                             echo("<tr>");
                             echo("<td>".$row["id_pracownicy"]."</td><td>".$row["imie"]."</td><td>".$row["dzial"]."</td><td>".$row["zarobki"]."</td><td>".$row["data_urodzenia"]."</td>");
                             echo("<td><form method=POST action='delete.php'>");
-                            echo("<input type='hidden' name='id' value='".$row['id_pracownicy']."'>");
-                            echo("<input type=submit value='X'>");
+                            echo("<name='id' value='".$row['id_pracownicy']."'>");
+                     echo("<input type=submit value='Usuń'>");
                             echo("</form></td>");                       
                             echo("</tr>");
                            }
