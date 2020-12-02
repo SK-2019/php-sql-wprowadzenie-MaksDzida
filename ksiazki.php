@@ -25,7 +25,7 @@ echo("<h2>Tytuły:</h2>");
 echo("<li>".$sql);
 
  $result = $conn->query($sql);
-        echo("<table>");
+        echo("<table border=1>");
         echo("<th>ID</th>");
         echo("<th>Tytuł</th>");
             while($row=$result->fetch_assoc()){ 
