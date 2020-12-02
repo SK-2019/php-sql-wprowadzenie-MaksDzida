@@ -16,7 +16,7 @@
 </div>
  <h1>Maks Dzida</h1>   
   
-  <php
+  <?php
   
  require_once('connect.php');
 echo("<h1>Książki i autorzy:</h1>");
@@ -38,3 +38,5 @@ echo("<li>".$sql);
         echo("</table>");
 
 ?>
+    </body>
+</html>
