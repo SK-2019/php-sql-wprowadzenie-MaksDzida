@@ -13,13 +13,14 @@
      <a class="nav_link" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
   <a class="nav_link" href="funkcAgregujace.php">Funkcje Agregujące</a>
    <a class="nav_link" href="data_czas.php">Data i Czas</a>
+     <a class="nav_link" href="ksiazki.php">Biblioteka</a>
 </div>
  <h1>Maks Dzida</h1>   
   
   <?php
   
  require_once('connect.php');
-echo("<h1>Książki i autorzy:</h1>");
+echo("<h1>Biblioteka:</h1>");
 $sql = 'SELECT * FROM biblTytul';
 echo("<h2>Tytuły:</h2>");
 echo("<li>".$sql);
