@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
     
@@ -19,7 +19,7 @@
   
   <?php
   
- require_once('connect.php');
+ require_once('../connect.php');
 echo("<h1>Książki i ich autorzy:</h1>");
 $sql = 'SELECT * FROM biblTytul';
 echo("<h2>Tytuły:</h2>");
