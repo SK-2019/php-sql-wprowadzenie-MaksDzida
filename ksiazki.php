@@ -38,7 +38,7 @@ echo("<li>".$sql);
 
         echo("</table>");
     
-    require_once('connect.php');
+    
 $sql = 'SELECT * FROM biblAutor';
 echo("<h2>Autorzy:</h2>");
 echo("<li>".$sql);
@@ -55,6 +55,26 @@ echo("<li>".$sql);
             }
 
         echo("</table>");
+    
+    $sql = 'SELECT * FROM biblAutor, biblTytul, biblAutor_biblTytul WHERE biblAutor_id=biblAutor.id and biblTytul_id=biblTytul.id';
+echo("<h2>Łączna tabelka:</h2>");
+echo("<li>".$sql);
+
+ $result = $conn->query($sql);
+        echo("<table border=1>");
+        echo("<th>ID</th>");
+        echo("<th>Autor</th>");
+        echo("<th>Tytuł</th>");
+            while($row=$result->fetch_assoc()){ 
+                echo("<tr>");
+                    echo("<td>".$row["id"]."</td><td>".$row["autor"]."</td><td>".$row["tytul"]."</td>"); 
+                echo("</tr>");
+            }
+
+        echo("</table>");
+  
+    
+    
 
 ?>
     </body>
