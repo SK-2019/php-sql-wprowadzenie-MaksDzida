@@ -4,6 +4,17 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
+    <div class="container">
+      <div class="item colorRed">
+        <h1> Maks Dzida 2Ti</h1>
+
+        <h1 class="tltle"></h1>
+      </div>
+      <div class="item colorBlue">LINK DO GITHUBA:</div>
+      <div class="item colorGreen">
+
+      </div>
     
     
 <strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
