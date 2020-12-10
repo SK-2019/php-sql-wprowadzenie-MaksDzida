@@ -26,6 +26,7 @@ tr:nth-child(even){
 .nav{
   width:20%;
     background-color:lightblue;
+  margin-right:25px;
 }
 
 .nav_link{
