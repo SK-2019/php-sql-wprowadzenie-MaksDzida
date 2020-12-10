@@ -7,6 +7,7 @@
   text-align:center;
   width:100%;
   font-size:30px;
+  background-color: lightgreen;
 }
 body {
     background-color: #ffe6ff;
@@ -21,7 +22,8 @@ tr:nth-child(even){
     background-color: #f2f2f2;
 }
 .phpbox {
-  width:65%;
+  width:75%;
+  background-color:lightyellow;
 }
 .nav{
   width:20%;
