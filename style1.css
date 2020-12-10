@@ -25,14 +25,14 @@ tr:nth-child(even){
 }
 .nav{
   width:20%;
-  margin-right:10px;
-  margin-left:10px;
     background-color:lightblue;
-  margin-top:5px;
-  text-align:center;
 }
 
 .nav_link{
+    margin-top:5px;
+  text-align:center;
+  margin-right:10px;
+  margin-left:10px;
   border: 1px solid black;
   display:block;
     color: black;
