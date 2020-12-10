@@ -1,28 +1,11 @@
 .container {
-  background-color: lightcoral;
   display: flex;
   flex-wrap: wrap;
-}
-
-.item_link {
-  margin: 20px;
-}
-
-.colorRed {
-  background-color: red;
   width: 100%;
 }
-
-.colorBlue {
-  background-color: lightblue;
-  width: 30%;
+.name {
+  width:95%
 }
-
-.colorGreen {
-  background-color: lightgreen;
-  width: 60%;
-}
-
 body {
     background-color: #ffe6ff;
   }
@@ -35,8 +18,11 @@ table {
 tr:nth-child(even){
     background-color: #f2f2f2;
 }
-
+.phpbox {
+  width:65%;
+}
 .nav{
+  width:30%;
     background-color:lightblue;
 }
 
