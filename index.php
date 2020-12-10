@@ -9,7 +9,7 @@
  <div class='container'>
    <div class='name'><h1>Maks Dzida</h1></div>
 <div class="nav">
-  <strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
+  <strong><a class="nav_link" href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
    <a class="nav_link" href="index.php">Strona</a>
     <a class="nav_link" href="pracownicy.php">Pracownicy - wstęp</a>
      <a class="nav_link" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
