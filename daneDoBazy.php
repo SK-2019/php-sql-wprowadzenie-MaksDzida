@@ -38,11 +38,7 @@
 </form>
 
   
-       </div>
-   </div>      
-  </body>
-</html>
-
+       
  <?php
                 require_once("connect.php");
                 $result=$conn->query("Select * from pracownicy");
@@ -64,3 +60,7 @@
                            }
                 echo("</table>");
 ?>
+</div>
+   </div>      
+  </body>
+</html>
