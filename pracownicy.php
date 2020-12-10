@@ -5,15 +5,20 @@
 </head>
 <body>
    
-   <strong><a href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
+   <div class='container'>
+    <div class='name'><h1>Maks Dzida</h1></div>
+      
+   
+   
 <div class="nav">
+   <strong><a class="nav_link" href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
     <a class="nav_link" href="index.php">Strona</a>
     <a class="nav_link" href="pracownicy.php">Pracownicy - wstęp</a>
      <a class="nav_link" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
   <a class="nav_link" href="funkcAgregujace.php">Funkcje Agregujące</a>
    <a class="nav_link" href="data_czas.php">Data i Czas</a>
 </div>
-<h1>Maks Dzida</h1>
+      <div class='phpbox'>
 
 <?php
     require_once('connect.php');
@@ -105,5 +110,9 @@ $sql="SELECT * from pracownicy where dzial=2";
   
      
 ?>
+           
+      </div>
+   </div>
+   
     </body>
 </html>
