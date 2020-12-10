@@ -24,11 +24,13 @@ tr:nth-child(even){
   display:inline-block;
 }
 .nav{
-  width:30%;
+  width:20%;
     background-color:lightblue;
   display:inline-block;
 }
 
 .nav_link{
-    color: red;
+    color: #ff99ff;
+    font-size: 25px;
+  
 }
