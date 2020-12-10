@@ -1,10 +1,11 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 95%;
 }
 .name {
   width:100%;
+  display:block;
 }
 body {
     background-color: #ffe6ff;
@@ -20,10 +21,12 @@ tr:nth-child(even){
 }
 .phpbox {
   width:65%;
+  display:inline-block;
 }
 .nav{
   width:30%;
     background-color:lightblue;
+  display:inline-block;
 }
 
 .nav_link{
