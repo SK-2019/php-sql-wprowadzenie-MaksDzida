@@ -18,7 +18,7 @@
      <a class="nav_link" href="formularz.html">Formularz</a>
     <a class="nav_link" href="daneDoBazy.php">Dodaj Dane</a>
     <a class="nav_link" href="function.php">Funkcja</a>
-      <a class="nav_link" href="ksiazki/ksiazki.php">Biblioteka</a>
+      <a class="nav_link" href="ksiazki.php">Biblioteka</a>
 </div>  
     <div class='phpbox'>
   
