@@ -22,7 +22,9 @@
 </div>  
     <div class='phpbox'>
   
+        
   <?php
+        
   
  require_once('../connect.php');
 echo("<h1>Książki i ich autorzy:</h1>");
