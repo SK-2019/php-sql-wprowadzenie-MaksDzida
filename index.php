@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-  <!-- sprawdzenie połączenia -->
+  
   
  <div class='container'>
    <div class='name'><h1>Maks Dzida</h1></div>
