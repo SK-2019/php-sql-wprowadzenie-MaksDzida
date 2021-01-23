@@ -5,7 +5,6 @@
 </head>
 <body>
   
-  
  <div class='container'>
    <div class='name'><h1>Maks Dzida</h1></div>
 <div class="nav">
