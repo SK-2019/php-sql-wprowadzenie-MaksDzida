@@ -21,7 +21,7 @@
       <div class='phpbox'>
 
 <?php
-    require_once('../assets/connect.php');
+    require_once('/assets/connect.php');
    $sql="SELECT * from pracownicy";
 echo("<li>.$sql</li>");
     $result=$conn->query($sql);

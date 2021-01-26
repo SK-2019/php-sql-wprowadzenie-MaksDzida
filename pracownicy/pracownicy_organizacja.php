@@ -22,7 +22,7 @@
     <div class='phpbox'>
     
 <?php
-   require_once('../assets/connect.php');
+   require_once('/assets/connect.php');
 	$sql="SELECT id_pracownicy, imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org";
 	
 echo("<li>.$sql</li>");
