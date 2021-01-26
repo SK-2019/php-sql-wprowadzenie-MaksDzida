@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="/assets/style1.css">
 </head>
 <body>
     
@@ -10,21 +10,21 @@
 <div class="nav">
   <strong><a class="nav_link" href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
    <a class="nav_link" href="index.php">Strona</a>
-    <a class="nav_link" href="pracownicy.php">Pracownicy - wstęp</a>
-     <a class="nav_link" href="pracownicy_organizacja.php">Pracownicy i Organizacja</a>
-  <a class="nav_link" href="funkcAgregujace.php">Funkcje Agregujące</a>
-   <a class="nav_link" href="data_czas.php">Data i Czas</a>
-     <a class="nav_link" href="formularz.html">Formularz</a>
-    <a class="nav_link" href="daneDoBazy.php">Dodaj Dane</a>
-    <a class="nav_link" href="function.php">Funkcja</a>
-      <a class="nav_link" href="ksiazki.php">Biblioteka</a>
+    <a class="nav_link" href="/pracownicy/pracownicy.php">Pracownicy - wstęp</a>
+     <a class="nav_link" href="/pracownicy/pracownicy_organizacja.php">Pracownicy i Organizacja</a>
+  <a class="nav_link" href="/pracownicy/funkcAgregujace.php">Funkcje Agregujące</a>
+   <a class="nav_link" href="/pracownicy/data_czas.php">Data i Czas</a>
+     <a class="nav_link" href="/ćwiczenia/formularz.html">Formularz</a>
+    <a class="nav_link" href="/pracownicy/daneDoBazy.php">Dodaj Dane</a>
+    <a class="nav_link" href="/ćwiczenia/function.php">Funkcja</a>
+      <a class="nav_link" href="/biblioteka/ksiazki.php">Biblioteka</a>
 </div>  
     <div class='phpbox'>
     
 
     
 <?php
-   require_once('connect.php');
+   require_once('../assets/connect.php');
     
     $sql='SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org';
      

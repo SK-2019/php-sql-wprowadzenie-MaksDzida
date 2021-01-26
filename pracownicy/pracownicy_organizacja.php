@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="/assets/style1.css">
 </head>
 <body>
     
@@ -22,7 +22,7 @@
     <div class='phpbox'>
     
 <?php
-   require_once('connect.php');
+   require_once('../assets/connect.php');
 	$sql="SELECT id_pracownicy, imie, zarobki, data_urodzenia, nazwa_dzial FROM pracownicy, organizacja WHERE dzial=id_org";
 	
 echo("<li>.$sql</li>");
