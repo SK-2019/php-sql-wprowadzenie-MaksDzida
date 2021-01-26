@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="/assets/style1.css">
 </head>
 <body>
    
@@ -21,7 +21,7 @@
       <div class='phpbox'>
 
 <?php
-    require_once('connect.php');
+    require_once('../assets/connect.php');
    $sql="SELECT * from pracownicy";
 echo("<li>.$sql</li>");
     $result=$conn->query($sql);
