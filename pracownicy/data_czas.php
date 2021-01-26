@@ -9,7 +9,7 @@
    <div class='name'><h1>Maks Dzida</h1></div>
 <div class="nav">
   <strong><a class="nav_link" href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
-   <a class="nav_link" href="index.php">Strona</a>
+   <a class="nav_link" href="/index.php">Strona</a>
     <a class="nav_link" href="/pracownicy/pracownicy.php">Pracownicy - wstęp</a>
      <a class="nav_link" href="/pracownicy/pracownicy_organizacja.php">Pracownicy i Organizacja</a>
   <a class="nav_link" href="/pracownicy/funkcAgregujace.php">Funkcje Agregujące</a>
