@@ -24,7 +24,7 @@
 
     
 <?php
-   require_once('/assets/connect.php');
+   require_once('../assets/connect.php');
     
     $sql='SELECT *, YEAR(curdate())-YEAR(data_urodzenia) as wiek FROM pracownicy, organizacja WHERE dzial=id_org';
      

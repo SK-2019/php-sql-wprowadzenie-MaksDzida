@@ -19,7 +19,7 @@
     
     <div class='phpbox'>
 <?php
-   require_once('/assets/connect.php');
+   require_once('../assets/connect.php');
     $sql="SELECT sum(zarobki) as suma from pracownicy";
     echo("<li>.$sql</li>");
 

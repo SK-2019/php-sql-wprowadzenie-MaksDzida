@@ -26,7 +26,7 @@
   <?php
         
   
- require_once('/assets/connect.php');
+ require_once('../assets/connect.php');
 echo("<h1>Książki i ich autorzy:</h1>");
 $sql = 'SELECT * FROM biblTytul';
 echo("<h2>Tytuły:</h2>");
