@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="/assets/style1.css">
 </head>
 <body>
 <!-- sprawdzenie polaczenia -->
