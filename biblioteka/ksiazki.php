@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="/assets/mystyles.css/style1.css">
+<link rel="stylesheet" href="/assets/style1.css">
 </head>
 <body>
     
