@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title> Maks Dzida 2Ti gr2 </title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/assets/style1.css">
 </head>
