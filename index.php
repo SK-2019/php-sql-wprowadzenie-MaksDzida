@@ -3,6 +3,7 @@
 <head>
 <title> Maks Dzida 2Ti gr2 </title>
 <link rel="stylesheet" href="assets/style1.css">
+<link  rel = "icon" href = "https://bi.im-g.pl/im/b5/3b/13/z20167349V.jpg">
 </head>
 <body>
 <!-- sprawdzenie polaczenia -->
