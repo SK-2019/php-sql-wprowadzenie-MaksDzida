@@ -25,8 +25,7 @@
 <?php
 
 
-
-
+require_once("assets/connect.php");
    
 
 
