@@ -1,12 +1,14 @@
+
+
+
+
+
 <?php
-$servername = "remotemysql.com" ;
-$username =  "2CMNLoipEx" ;
-$password = "MVjnZFDUhb" ;
-$dbname = "2CMNLoipEx";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+    $conn= new mysqli($_SERVER['servername'],$_SERVER['username'],$_SERVER['password'],$_SERVER['dbname']);
+    if ($conn->connect_error) {
+        die("connection failed: ".mysqli_connect_error());
+    }
+?>
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-  }
-  ?>
+
