@@ -24,8 +24,15 @@
     <div class='phpbox'>
 <?php
 
-echo("<li> hostname : ".$_SERVER['HTTP_HOST']);
-require_once('assets/conn.php');
+
+$hostname = $_SERVER['HTTP_HOST'];
+
+if ($hostname == 'localhost:8003') {
+    require_once ("config.php");
+}
+echo("<li> hostname : ".$hostname);
+echo("<li> SERVER passsword: ".$_SERVER['pass']);
+
    
 
 
