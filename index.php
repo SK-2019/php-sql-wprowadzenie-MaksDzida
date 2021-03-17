@@ -24,6 +24,7 @@
     <div class='phpbox'>
 <?php
 
+echo ("test");
 $hostname = $_SERVER['HTTP_HOST'];
 
 if ($hostname == '127.0.0.1'){
