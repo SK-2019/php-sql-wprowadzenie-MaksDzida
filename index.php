@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
 <title> Maks Dzida 2Ti gr2 </title>
@@ -24,13 +24,14 @@
     <div class='phpbox'>
 <?php
 
-echo ("Test");
-
 $hostname = $_SERVER['HTTP_HOST'];
 
 if ($hostname == '127.0.0.1'){
     require_once("assets/config.php");   }
-    $d=strtotime("now"); echo"<li>".date("Y-m-d h:i:sa",$d). "<br>";
+    echo("<li> SERVER password: ".$_SERVER['pass']);
+    
+
+
 
 require_once("assets/connect.php");
    
