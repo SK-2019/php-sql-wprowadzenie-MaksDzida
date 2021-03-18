@@ -22,6 +22,7 @@
       <a class="nav_link" href="/biblioteka/ksiazki.php">Biblioteka</a>
 </div>  
     <div class='phpbox'>
+    
   
    <form action="insert.php" method="POST">
         <input type="text" name="imie" placeholder="imie"><br>

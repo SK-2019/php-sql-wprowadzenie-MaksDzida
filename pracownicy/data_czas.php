@@ -19,6 +19,7 @@
     <a class="nav_link" href="/pracownicy/daneDoBazy.php">Dodaj Dane</a>
     <a class="nav_link" href="/ćwiczenia/function.php">Funkcja</a>
       <a class="nav_link" href="/biblioteka/ksiazki.php">Biblioteka</a>
+      
 </div>  
     <div class='phpbox'>
     

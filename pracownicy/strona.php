@@ -6,4 +6,5 @@ echo("<li>Zarobki: ".$_POST['zarobki']."</li>");
 echo("<li>Data urodzenia: ".$_POST['data_ur']."</li>");
 
 
+
 ?>

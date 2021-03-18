@@ -11,6 +11,7 @@
     echo "Pracownik został usunięty poprawnie!";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
+    
   }
   $conn->close();
 ?>

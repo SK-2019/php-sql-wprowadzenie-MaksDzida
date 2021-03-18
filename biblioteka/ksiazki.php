@@ -33,6 +33,7 @@ $sql = 'SELECT * FROM biblTytul';
 echo("<h2>Tytuły:</h2>");
 echo("<li>".$sql);
 
+
  $result = $conn->query($sql);
       
       echo("<select name='title' id='title'>");
