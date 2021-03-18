@@ -41,6 +41,7 @@ while($row=$result->fetch_assoc()){
 echo("<option value=".$row['id'].">".$row['tytul']."</option>");
         }
     echo("</select>");
+    
         
         
     
