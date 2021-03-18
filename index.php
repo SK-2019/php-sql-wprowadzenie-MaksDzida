@@ -101,6 +101,7 @@ echo("<li>ZADANIE 4 - SELECT avg(zarobki), nazwa_dzial FROM pracownicy, organiza
                     echo("<tr>");
                         echo("<td>" .$row["srednia"]. "</td><td>" .$row["nazwa_dzial"]. "</td>");
                         echo("</tr>");
+                        
             }            
         echo("</table>");
      echo("<hr>");
