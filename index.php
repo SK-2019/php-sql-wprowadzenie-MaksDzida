@@ -24,13 +24,13 @@
     <div class='phpbox'>
 <?php
 
-echo ("test");
+echo ("Test");
+
 $hostname = $_SERVER['HTTP_HOST'];
 
 if ($hostname == '127.0.0.1'){
     require_once("assets/config.php");   }
-    echo("<li> SERVER password: ".$_SERVER['pass']);
-
+    $d=strtotime("now"); echo"<li>".date("Y-m-d h:i:sa",$d). "<br>";
 
 require_once("assets/connect.php");
    
