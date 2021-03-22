@@ -3,6 +3,8 @@
 
 
 
+
+    
 <?php
 $hostname = $_SERVER['HTTP_HOST'];
 if ($hostname === '127.0.0.1'){
@@ -14,5 +16,3 @@ if ($hostname === '127.0.0.1'){
         die("connection failed: ".mysqli_connect_error());
     }
 ?>
-
-
