@@ -21,7 +21,7 @@
     <a class="nav_link" href="/pracownicy/daneDoBazy.php">Dodaj Dane</a>
     <a class="nav_link" href="/ćwiczenia/function.php">Funkcja</a>
       <a class="nav_link" href="/biblioteka/ksiazki.php">Biblioteka</a>
-      <a class="nav_link" href="/ćwiczenia/flexbox.html">Flexbox</a>
+      <a class="nav_link" href="/flexbox/flexbox.html">Flexbox</a>
 </div>  
     <div class='phpbox'>
 <?php
