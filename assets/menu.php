@@ -14,7 +14,8 @@
  <a class="nav_link" href="/pracownicy/daneDoBazy.php">Dodaj Dane</a>
  <a class="nav_link" href="/ćwiczenia/function.php">Funkcja</a>
    <a class="nav_link" href="/biblioteka/ksiazki.php">Biblioteka</a>
-   <a class="nav_link" href="/flexbox/flexbox.html">Flexbox</a>
+   <a class="nav_link" href="/biblioteka/wieledowielu.php">Wiele do wielu</a>
+   <a class="nav_link" href="//flexbox.html">próbny flexbox</a>
 </div>  
  <div class='phpbox'>
 
