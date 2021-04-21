@@ -6,19 +6,12 @@
 </head>
 <body>
     
-	<div class='container'>
-		<div class='name'><h1>Maks Dzida</h1></div>
+<?php
+      include("../assets/header.php");
+      include("../assets/menu.php");
+      ?>
 
-<div class="nav">
-	<strong><a class="nav_link" href="https://github.com/SK-2019/php-sql-wprowadzenie-MaksDzida">Github</a></strong>
-    <a class="nav_link" href="/index.php">Strona</a>
-    <a class="nav_link" href="/pracownicy/pracownicy.php">Pracownicy - wstęp</a>
-     <a class="nav_link" href="/pracownicy/pracownicy_organizacja.php">Pracownicy i Organizacja</a>
-  <a class="nav_link" href="/pracownicy/funkcAgregujace.php">Funkcje Agregujące</a>
-   <a class="nav_link" href="/pracownicy/data_czas.php">Data i Czas</a>
-</div>
-    
-    <div class='phpbox'>
+
 <?php
  require_once('../assets/connect.php');
     $sql="SELECT sum(zarobki) as suma from pracownicy";
