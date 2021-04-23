@@ -2,7 +2,7 @@
 <html>
 <head>
 <title> Maks Dzida 2Ti gr2 </title>
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="../assets/style.css">
 <link  rel = "icon" href = "https://cdn.galleries.smcloud.net/t/galleries/gf-adXv-uHGX-gbwR_harambe-664x0-nocrop.jpg">
 </head>
 <body>
@@ -11,8 +11,8 @@
 
 
 <?php
-      include("assets/header.php");
-      include("assets/menu.php");
+      include("../assets/header.php");
+      include("../assets/menu.php");
 ?>
 
 <?php
@@ -28,7 +28,7 @@
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
                          echo("<td>" .$row["id_pracownik"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["nazwa"]. "</td>");
-                         echo("</tr>");
+                     echo("</tr>");
              }            
          echo("</table>");
       echo("<hr>");
