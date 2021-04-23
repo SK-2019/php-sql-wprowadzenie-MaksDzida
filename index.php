@@ -13,7 +13,7 @@
 <?php
       include("assets/header.php");
       include("assets/menu.php");
-      ?>
+?>
 
 <?php
 

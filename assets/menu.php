@@ -16,7 +16,11 @@
    <a class="nav_link" href="/biblioteka/ksiazki.php">Biblioteka</a>
    <a class="nav_link" href="/flexbox/flexbox.html">Próbny flexbox</a>
    <div class="wieletag">Wiele do wielu:</div>
-   <a class="nav_link" href="/biblioteka/wieledowielu.php">Wiele do wielu</a>
+   <a class="nav_link" href="/relacje/wieledowielu1.php">Pracownik-Projekt</a>
+   <a class="nav_link" href="/biblioteka/wieledowielu.php">Autor-Tytuł</a>
+   <a class="nav_link" href="/biblioteka/wieledowielu.php">Lekarz-Pacjent</a>
+   <a class="nav_link" href="/biblioteka/wieledowielu.php">Producenci-artykuły</a>
+   <a class="nav_link" href="/biblioteka/wieledowielu.php">Fryzjer-Klient</a>
 </div>  
  <div class='phpbox'>
 
