@@ -41,3 +41,8 @@ tr:nth-child(even){
     font-size: 25px; 
   
 }
+.wieletag{
+  font-size: 30px;
+  margin-top: 10px 0px 0px 8px;
+  font-weight: bold;
+}
