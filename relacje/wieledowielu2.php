@@ -27,7 +27,7 @@
          echo("<th>Pacjent</th>");
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
-                     echo("<td>".$row["id_lekarz"]."</td><td>".$row["imie"]."</td><td>".$row["id_pacjent"]."</td><td>".$row["imie"]."</td>");
+                     echo("<td>".$row["id_lekarz"]."</td><td>".$row["imie_lekarz"]."</td><td>".$row["id_pacjent"]."</td><td>".$row["imie"]."</td>");
                      echo("</tr>");
              }            
          echo("</table>");
@@ -58,7 +58,7 @@
         echo("<th>Imię i nazwisko</th>");
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
-                        echo("<td>" .$row["id_lekarz"]. "</td><td>" .$row["imie"]. "</td>");
+                        echo("<td>" .$row["id_lekarz"]. "</td><td>" .$row["imie_lekarz"]. "</td>");
                         echo("</tr>");
             }            
         echo("</table>");
