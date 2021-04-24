@@ -23,8 +23,8 @@
          echo("<table border=1>");
          echo("<th>ID</th>");
          echo("<th>Imie</th>");
-         echo("<th>Dział</th>");
-         echo("<th>Projekt</th>");
+         echo("<th>ID</th>");
+         echo("<th>imie</th>");
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
                      echo("<td>".$row["id_lekarze"]."</td><td>".$row["imie"]."</td><td>".$row["id_pacjent"]."</td><td>".$row["imie"]."</td>");
@@ -38,6 +38,7 @@
     echo("<li>.$sql</li>");
     $result=$conn->query($sql);
         echo("<table border=1>");
+        echo("<th>ID</th>");
         echo("<th>Imie i nazwisko</th>");
     
             while($row=$result->fetch_assoc()){
