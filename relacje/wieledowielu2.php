@@ -22,12 +22,12 @@
      $result=$conn->query($sql);
          echo("<table border=1>");
          echo("<th>ID</th>");
-         echo("<th>Imie</th>");
+         echo("<th>Lekarz</th>");
          echo("<th>ID</th>");
-         echo("<th>imie</th>");
+         echo("<th>Pacjent</th>");
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
-                     echo("<td>".$row["id_lekarze"]."</td><td>".$row["imie"]."</td><td>".$row["id_pacjent"]."</td><td>".$row["imie"]."</td>");
+                     echo("<td>".$row["id_lekarz"]."</td><td>".$row["imie"]."</td><td>".$row["id_pacjent"]."</td><td>".$row["imie"]."</td>");
                      echo("</tr>");
              }            
          echo("</table>");
