@@ -18,7 +18,7 @@
    <div class="wieletag">Wiele do wielu:</div>
    <a class="nav_link" href="/relacje/wieledowielu1.php">Pracownik-Projekt</a>
    <a class="nav_link" href="/biblioteka/wieledowielu.php">Autor-Tytuł</a>
-   <a class="nav_link" href="/biblioteka/wieledowielu2.php">Lekarz-Pacjent</a>
+   <a class="nav_link" href="/relacje/wieledowielu2.php">Lekarz-Pacjent</a>
    <a class="nav_link" href="/biblioteka/wieledowielu.php">Producenci-artykuły</a>
    <a class="nav_link" href="/biblioteka/wieledowielu.php">Fryzjer-Klient</a>
 </div>  
