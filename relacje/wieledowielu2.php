@@ -27,7 +27,7 @@
          echo("<th>Projekt</th>");
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
-                         echo("<td>" .$row["id_pracownik"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["nazwa"]. "</td>");
+                     echo("<td>".$row["id_lekarze"]."</td><td>".$row["imie"]."</td><td>".$row["id_pacjent"]."</td><td>".$row["imie"]."</td>");
                      echo("</tr>");
              }            
          echo("</table>");
@@ -38,14 +38,11 @@
     echo("<li>.$sql</li>");
     $result=$conn->query($sql);
         echo("<table border=1>");
-        echo("<th>ID</th>");
-        echo("<th>Imie</th>");
-        echo("<th>Dział</th>");
-        echo("<th>Zarobki</th>");
-        echo("<th>Data Urodzenia</th>");
+        echo("<th>Imie i nazwisko</th>");
+    
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
-                        echo("<td>" .$row["id_pracownik"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["wynagrodzenie"]. "</td><td>" .$row["dataUrodzenia"]. "</td>");
+                    echo("<td>" .$row["id_pacjent"]. "</td><td>" .$row["imie"]. "</td>");
                         echo("</tr>");
             }            
         echo("</table>");
@@ -57,10 +54,10 @@
     $result=$conn->query($sql);
         echo("<table border=1>");
         echo("<th>ID</th>");
-        echo("<th>Nazwa</th>");
+        echo("<th>Imię i nazwisko</th>");
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
-                        echo("<td>" .$row["id_projekt"]. "</td><td>" .$row["nazwa"]. "</td>");
+                        echo("<td>" .$row["id_lekarz"]. "</td><td>" .$row["imie"]. "</td>");
                         echo("</tr>");
             }            
         echo("</table>");
