@@ -27,7 +27,7 @@
          echo("<th>cena</th>");
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
-                     echo("<td>".$row["id_lekarz"]."</td><td>".$row["nazwa_producent"]."</td><td>".$row["nazwa_artykul"]."</td><td>".$row["cena"]."</td>");
+                     echo("<td>".$row["id_producent"]."</td><td>".$row["nazwa_producent"]."</td><td>".$row["nazwa_artykul"]."</td><td>".$row["cena"]."</td>");
                      echo("</tr>");
              }            
          echo("</table>");
@@ -40,10 +40,11 @@
         echo("<table border=1>");
         echo("<th>ID</th>");
         echo("<th>Artykuł</th>");
+        echo("<th>Cena</th>");
     
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
-                    echo("<td>" .$row["id_artykul"]. "</td><td>" .$row["nazwa_artykul"]. "</td>");
+                    echo("<td>" .$row["id_artykul"]. "</td><td>" .$row["nazwa_artykul"]. "</td><td>".$row["cena"]. "</td>");
                         echo("</tr>");
             }            
         echo("</table>");
