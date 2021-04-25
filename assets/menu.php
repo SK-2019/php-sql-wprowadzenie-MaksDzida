@@ -20,7 +20,7 @@
    <a class="nav_link" href="/biblioteka/wieledowielu.php">Autor-Tytuł</a>
    <a class="nav_link" href="/relacje/wieledowielu3.php">Lekarz-Pacjent</a>
    <a class="nav_link" href="/biblioteka/wieledowielu.php">Producenci-artykuły</a>
-   <a class="nav_link" href="/biblioteka/wieledowielu.php">Fryzjer-Klient</a>
+   <a class="nav_link" href="/biblioteka/wieledowielu5.php">Fryzjer-Klient</a>
 </div>  
  <div class='phpbox'>
 
