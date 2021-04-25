@@ -58,7 +58,7 @@
         echo("<th>Nauczyciel</th>");
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
-                        echo("<td>" .$row["id_lekarz"]. "</td><td>" .$row["imie_nauczyciel"]. "</td>");
+                        echo("<td>" .$row["id_nauczyciel"]. "</td><td>" .$row["imie_nauczyciel"]. "</td>");
                         echo("</tr>");
             }            
         echo("</table>");
