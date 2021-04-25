@@ -17,7 +17,7 @@
    <a class="nav_link" href="/flexbox/flexbox.html">Próbny flexbox</a>
    <div class="wieletag">Wiele do wielu:</div>
    <a class="nav_link" href="/relacje/wieledowielu1.php">Pracownik-Projekt</a>
-   <a class="nav_link" href="/relacje/wieledowielu.php">Autor-Tytuł</a>
+   <a class="nav_link" href="/relacje/wieledowielu2.php">Nauczyciel-Klasa</a>
    <a class="nav_link" href="/relacje/wieledowielu3.php">Lekarz-Pacjent</a>
    <a class="nav_link" href="/relacje/wieledowielu.php">Producenci-artykuły</a>
    <a class="nav_link" href="/relacje/wieledowielu5.php">Fryzjer-Klient</a>
