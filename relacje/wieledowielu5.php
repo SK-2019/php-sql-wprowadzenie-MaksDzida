@@ -27,7 +27,7 @@
          echo("<th>Imie i nazwisko klienta</th>");
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
-                     echo("<td>".$row["id_fryzjer"]."</td><td>".$row["imie_frzyjer"]."</td><td>".$row["id_klient"]."</td><td>".$row["imie"]."</td>");
+                     echo("<td>".$row["id_fryzjer"]."</td><td>".$row["imie_fryzjer"]."</td><td>".$row["id_klient"]."</td><td>".$row["imie"]."</td>");
                      echo("</tr>");
              }            
          echo("</table>");
