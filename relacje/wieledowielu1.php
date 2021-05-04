@@ -20,13 +20,6 @@ ini_set('display_errors','1');
 ini_set('display_startup_errors','1');
 error_reporting(E_ALL);
 
-
-    function delete($plik,$nazwa,$nazwarow){
-        echo("<td><form method=POST action=$plik>");
-            echo("<input type name=$nazwa value='".$row[$nazwarow]."'hidden>");
-        echo("<input type=submit value='Usuń'></form></td>");
-    }
-
      require_once('../assets/connect.php');
      $sql="SELECT *,pracownik_projekt.id as tabid from pracownik,projekt,pracownik_projekt where id_pracownik=pracownikID and id_projekt=projektID";
      echo("<li>.$sql</li>");
