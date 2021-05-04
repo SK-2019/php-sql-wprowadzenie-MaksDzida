@@ -33,7 +33,7 @@
          echo("<th>Projekt</th>");
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
-                         echo("<td>" .$row["id_pracownik"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["nazwa"]. "</td>");
+                         echo("<td>" .$row["tabid"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["nazwa"]. "</td>");
                          delete("del1wieledowielu1.php","id","tabid");
                      echo("</tr>");
              }            
