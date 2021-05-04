@@ -53,7 +53,6 @@ error_reporting(E_ALL);
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
                         echo("<td>" .$row["id_pracownik"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["wynagrodzenie"]. "</td><td>" .$row["dataUrodzenia"]. "</td>");
-                        delete("del2wieledowielu1.php","id","id_pracownik");
                         echo("</tr>");
             }            
         echo("</table>");
@@ -69,7 +68,6 @@ error_reporting(E_ALL);
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
                         echo("<td>" .$row["id_projekt"]. "</td><td>" .$row["nazwa"]. "</td>");
-                        delete("del3wieledowielu1.php","id","id_projekt");
                         echo("</tr>");
             }            
         echo("</table>");
