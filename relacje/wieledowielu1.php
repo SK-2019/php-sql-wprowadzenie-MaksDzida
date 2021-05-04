@@ -16,9 +16,6 @@
 ?>
 
 <?php
-ini_set('display_errors','1');
-ini_set('display_startup_errors','1');
-error_reporting(E_ALL);
 
      require_once('../assets/connect.php');
      $sql="SELECT *,pracownik_projekt.id as tabid from pracownik,projekt,pracownik_projekt where id_pracownik=pracownikID and id_projekt=projektID";
