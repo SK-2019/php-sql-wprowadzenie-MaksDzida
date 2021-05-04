@@ -43,11 +43,13 @@
         echo("<table border=1>");
         echo("<th>ID</th>");
         echo("<th>klasa</th>");
-    
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
                     echo("<td>" .$row["id_klasa"]. "</td><td>" .$row["klasa"]. "</td>");
-                        echo("</tr>");
+                        echo("<td><form method=POST action='del2wieledowielu2.php'>");
+                            echo("<input type name=id value='".$row['id_klasa']."'hidden>");
+                        echo("<input type=submit value='Usuń'></form></td>");
+                    echo("</tr>");
             }            
         echo("</table>");
      echo("<hr>");
