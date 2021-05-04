@@ -16,6 +16,11 @@
 ?>
 
 <?php
+ini_set('display_errors','1');
+ini_set('display_startup_errors','1');
+error_reporting(E_ALL);
+
+
     function delete($plik,$nazwa,$nazwarow){
         echo("<td><form method=POST action=$plik>");
             echo("<input type name=$nazwa value='".$row[$nazwarow]."'hidden>");
