@@ -17,7 +17,7 @@
 
 <?php
      require_once('../assets/connect.php');
-     $sql="SELECT * from klasa,nauczyciel,klasa_nauczyciel where id_klasa=klasaID and id_nauczyciel=nauczycielID";
+     $sql="SELECT *,klasa_nauczyciel.id as tabid from klasa,nauczyciel,klasa_nauczyciel where id_klasa=klasaID and id_nauczyciel=nauczycielID";
      echo("<li>.$sql</li>");
      $result=$conn->query($sql);
          echo("<table border=1>");
@@ -28,6 +28,9 @@
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
                      echo("<td>".$row["id_nauczyciel"]."</td><td>".$row["imie_nauczyciel"]."</td><td>".$row["id_klasa"]."</td><td>".$row["klasa"]."</td>");
+                        echo("<td><form method=POST action='del1wieledowielu2.php'>");
+                            echo("<input type name=id value='".$row['tabid']."'hidden>");
+                        echo("<input type=submit value='Usuń'></form></td>");
                      echo("</tr>");
              }            
          echo("</table>");
