@@ -16,8 +16,14 @@
 ?>
 
 <?php
+    function delete($plik,$nazwa,$nazwarow){
+        echo("<td><form method=POST action=$plik>");
+            echo("<input type name=$nazwa value='".$row[$nazwarow]."'hidden>");
+        echo("<input type=submit value='Usuń'></form></td>");
+    }
+
      require_once('../assets/connect.php');
-     $sql="SELECT * from pracownik,projekt,pracownik_projekt where id_pracownik=pracownikID and id_projekt=projektID";
+     $sql="SELECT *,pracownik_projekt.id as tabid from pracownik,projekt,pracownik_projekt where id_pracownik=pracownikID and id_projekt=projektID";
      echo("<li>.$sql</li>");
      $result=$conn->query($sql);
          echo("<table border=1>");
@@ -28,6 +34,7 @@
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
                          echo("<td>" .$row["id_pracownik"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["nazwa"]. "</td>");
+                         delete("del1wieledowielu1.php","id","tabid");
                      echo("</tr>");
              }            
          echo("</table>");
@@ -46,6 +53,7 @@
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
                         echo("<td>" .$row["id_pracownik"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["wynagrodzenie"]. "</td><td>" .$row["dataUrodzenia"]. "</td>");
+                        delete("del2wieledowielu1.php","id","id_pracownik");
                         echo("</tr>");
             }            
         echo("</table>");
@@ -61,6 +69,7 @@
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
                         echo("<td>" .$row["id_projekt"]. "</td><td>" .$row["nazwa"]. "</td>");
+                        delete("del3wieledowielu1.php","id","id_projekt");
                         echo("</tr>");
             }            
         echo("</table>");
