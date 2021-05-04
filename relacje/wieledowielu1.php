@@ -39,7 +39,9 @@ error_reporting(E_ALL);
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
                          echo("<td>" .$row["tabid"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["nazwa"]. "</td>");
-                         delete("del1wieledowielu1.php","id","tabid");
+                         echo("<td><form method=POST action='del1wieledowielu1.php'>");
+                            echo("<input type name=id value='".$row['tabid']."'hidden>");
+                        echo("<input type=submit value='Usuń'></form></td>");
                      echo("</tr>");
              }            
          echo("</table>");
