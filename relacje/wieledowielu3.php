@@ -17,7 +17,7 @@
 
 <?php
      require_once('../assets/connect.php');
-     $sql="SELECT * from pacjent,lekarz,pacjent_lekarz where id_pacjent=pacjentID and id_lekarz=lekarzID";
+     $sql="SELECT *,pacjent_lekarz.id as tabid  from pacjent,lekarz,pacjent_lekarz where id_pacjent=pacjentID and id_lekarz=lekarzID";
      echo("<li>.$sql</li>");
      $result=$conn->query($sql);
          echo("<table border=1>");
@@ -28,6 +28,9 @@
              while($row=$result->fetch_assoc()){
                      echo("<tr>");
                      echo("<td>".$row["id_lekarz"]."</td><td>".$row["imie_lekarz"]."</td><td>".$row["id_pacjent"]."</td><td>".$row["imie"]."</td>");
+                     echo("<td><form method=POST action='del1wieledowielu3.php'>");
+                     echo("<input type name=id value='".$row['tabid']."'hidden>");
+                 echo("<input type=submit value='Usuń'></form></td>");
                      echo("</tr>");
              }            
          echo("</table>");
@@ -44,6 +47,9 @@
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
                     echo("<td>" .$row["id_pacjent"]. "</td><td>" .$row["imie"]. "</td>");
+                    echo("<td><form method=POST action='del2wieledowielu3.php'>");
+                    echo("<input type name=id value='".$row['id_pacjent']."'hidden>");
+                echo("<input type=submit value='Usuń'></form></td>");
                         echo("</tr>");
             }            
         echo("</table>");
@@ -59,6 +65,9 @@
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
                         echo("<td>" .$row["id_lekarz"]. "</td><td>" .$row["imie_lekarz"]. "</td>");
+                        echo("<td><form method=POST action='del2wieledowielu3.php'>");
+                    echo("<input type name=id value='".$row['id_lekarz']."'hidden>");
+                echo("<input type=submit value='Usuń'></form></td>");
                         echo("</tr>");
             }            
         echo("</table>");
