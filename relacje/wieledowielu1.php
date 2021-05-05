@@ -50,6 +50,9 @@
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
                         echo("<td>" .$row["id_pracownik"]. "</td><td>" .$row["imie"]. "</td><td>" .$row["dzial_id"]. "</td><td>" .$row["wynagrodzenie"]. "</td><td>" .$row["dataUrodzenia"]. "</td>");
+                        cho("<td><form method=POST action='del2wieledowielu1.php'>");
+                            echo("<input type name=id value='".$row['id_pracownik']."'hidden>");
+                        echo("<input type=submit value='Usuń'></form></td>");
                         echo("</tr>");
             }            
         echo("</table>");
@@ -65,6 +68,9 @@
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
                         echo("<td>" .$row["id_projekt"]. "</td><td>" .$row["nazwa"]. "</td>");
+                        cho("<td><form method=POST action='del3wieledowielu1.php'>");
+                            echo("<input type name=id value='".$row['id_projekt']."'hidden>");
+                        echo("<input type=submit value='Usuń'></form></td>");
                         echo("</tr>");
             }            
         echo("</table>");
