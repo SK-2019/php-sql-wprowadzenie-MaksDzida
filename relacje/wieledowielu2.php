@@ -64,6 +64,9 @@
             while($row=$result->fetch_assoc()){
                     echo("<tr>");
                         echo("<td>" .$row["id_nauczyciel"]. "</td><td>" .$row["imie_nauczyciel"]. "</td>");
+                        echo("<td><form method=POST action='del3wieledowielu2.php'>");
+                        echo("<input type name=id value='".$row['id_nauczyciel']."'hidden>");
+                    echo("<input type=submit value='Usuń'></form></td>");
                         echo("</tr>");
             }            
         echo("</table>");
